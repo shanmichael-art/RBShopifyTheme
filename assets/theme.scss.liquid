@@ -5027,3 +5027,43 @@ h3.rb-diff-heading,
   letter-spacing: 0 !important;
   color: #111111 !important;
 }
+
+
+/* ============================================================
+   RB BUGFIX — Product grid sold-out badge + image bg
+============================================================ */
+
+/* Image wrapper: white bg to match product photography */
+.grid-product__image-wrapper {
+  background: #ffffff !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sold-out / sale badge: small corner tag, not full-height */
+.grid-product__sold-out,
+.grid-product__on-sale {
+  position: absolute !important;
+  top: 10px !important;
+  left: 10px !important;
+  bottom: auto !important;
+  right: auto !important;
+  width: auto !important;
+  height: auto !important;
+  min-height: 0 !important;
+  display: inline-block !important;
+  background: #111111 !important;
+  padding: 5px 9px !important;
+  z-index: 3;
+}
+.grid-product__sold-out p,
+.grid-product__on-sale p {
+  margin: 0 !important;
+  font-family: $accentFontStack !important;
+  font-size: 8px !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase !important;
+  color: #c9a96e !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+}
