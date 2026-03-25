@@ -1,0 +1,222 @@
+<!-- /templates/cart.liquid -->
+{% comment %}
+
+  For info on test orders:
+    - General http://docs.shopify.com/manual/your-store/orders/test-orders
+    - Shopify Payments - http://docs.shopify.com/manual/more/shopify-payments/testing-shopify-payments
+
+{% endcomment %}
+<div class="grid">
+  <div class="grid__item large--five-sixths push--large--one-twelfth">
+    {% if cart.item_count > 0 %}
+      <header class="section-header text-center">
+        <h1 class="text-center">{{ 'cart.general.title' | t }}</h1>
+        <hr class="hr--small">
+      </header>
+    
+    <!-- ConversionPirate.com CART SHIPPING BAR -->
+{% assign free_shipping_above = 50 %}
+{% assign missing_till_free_shipping = free_shipping_above | times: 100.0 | minus: cart.total_price %}
+<div class="pirate-shipping {% if missing_till_free_shipping > 0 %}tadadaaam{% endif %}"><div class="holdr">{% if missing_till_free_shipping > 0 %}<div class="left-30"><img src="data:image/png;base64,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" alt=""></div><div class="right-70">
+<span>You're {{missing_till_free_shipping | money }} away from free shipping!</span>
+<a href="/collections/all?sort_by=best-selling">View our bestselling products</a></div>{% else %}
+<span id="yesitsfree">Free shipping for you</span>{% endif %}
+</div></div>
+<style type="text/css">.pirate-shipping{width:100%;max-width:1170px;display:block;padding:20px 10px;margin:0 auto 5px;background-color:#000000}.tadadaaam{animation-duration:1s;animation-fill-mode:both;animation-timing-function:ease-in;animation-name:tadadaaam}.holdr{display:table;width:100%}.holdr .left-30,.holdr .right-70{display:table-cell;vertical-align:middle}.holdr .left-30{width:20%;text-align:center}.holdr .left-30 img{max-width:64px}.holdr .right-70{width:80%}.pirate-shipping span{color:#fff;font-size:24px;line-height:34px;font-weight:500;width:100%}span#yesitsfree{display:table-cell;text-align:center;margin:0 auto}.holdr .right-70 a{background-color:#fff;display:table-cell;padding:3px 6px;font-weight:600;color:#000;font-size:15px;text-decoration:none}.holdr .right-70 a:hover{background-color:#eee;transition:all .3s ease}@keyframes tadadaaam{0%{transform:scale(1)}10%,20%{transform:scale(.9) rotate(-3deg)}30%,50%,70%,90%{transform:scale(1.1) rotate(3deg)}40%,60%,80%{transform:scale(1.1) rotate(-3deg)}100%{transform:scale(1) rotate(0)}}</style>
+<!-- ConversionPirate.com CART SHIPPING BAR -->
+
+      <form action="/cart" method="post" novalidate class="cart">
+
+        <div class="cart__row medium-down--hide cart__header-labels">
+          <div class="grid--full">
+            <div class="grid__item large--two-fifths push--large--three-fifths">
+              <div class="grid--full">
+                <div class="grid__item one-third medium-down--half text-center">
+                  {{ 'cart.label.quantity' | t }}
+                </div>
+                <div class="grid__item two-thirds medium-down--half text-right">
+                  {{ 'cart.label.total' | t }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% comment %}
+          Loop through products in the cart
+        {% endcomment %}
+        {% for item in cart.items %}
+          <div class="cart__row">
+            <div class="grid--full cart__row--table-large">
+
+              <div class="grid__item large--three-fifths">
+                <div class="grid">
+
+                  <div class="grid__item one-third">
+                    <a href="{{ item.url | within: collections.all }}" class="cart__image">
+
+                      {% comment %}
+                        More image size options at:
+                          - http://docs.shopify.com/themes/filters/product-img-url
+                      {% endcomment %}
+                      <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
+                    </a>
+                  </div>
+
+                  <div class="grid__item two-thirds">
+                    <a href="{{ item.url }}" class="h4 cart__product-name">
+                      {{ item.product.title }}
+                    </a>
+                    {% unless item.variant.title contains 'Default' %}
+                      <p class="cart__product-meta">
+                        {{ item.variant.title }}
+                      </p>
+                    {% endunless %}
+
+                    {% if settings.product_vendor_enable %}
+                      <p class="cart__product-meta">{{ item.vendor }}</p>
+                    {% endif %}
+
+                    {% assign property_size = item.properties | size %}
+                    {% if property_size > 0 %}
+                      {%- comment -%}{% for p in item.properties %}
+                        {% assign first_character_in_key = p.first | truncate: 1, '' %}
+                        {% unless p.last == blank or first_character_in_key == '_' %}
+                          {{ p.first }}:
+
+                          {% if p.last contains '/uploads/' %}
+                            <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
+                          {% else %}
+                            {{ p.last }}
+                          {% endif %}
+
+                          <br>
+                        {% endunless %}
+                      {% endfor %}{%- endcomment -%}{%- for p in item.properties -%}
+            {%- unless p.last == blank -%}
+              <li class="product-details__item product-details__item--property{%if property_size == 0%} hide{% endif %}" data-cart-item-property>
+                <span class="product-details__item-label" data-cart-item-property-name>{{ p.first }}: </span>
+
+                {%- comment -%}
+                  Check if there was an uploaded file associated
+                {%- endcomment -%}
+                <span data-cart-item-property-value>
+                  {%- if p.last contains "uploads" -%}
+                    <a href="{{ p.last }}">Uploaded File</a>
+                  {%- else -%}
+                    {{ p.last }}
+                  {%- endif -%}
+                </span>
+              </li>
+            {%- endunless -%}
+          {%- endfor -%}
+            <button type="button" class="edit_cart_option btn btn--primary button" data-product_id="{{item.product_id}}" data-key="{{item.key}}" data-variant_id="{{item.variant_id}}" data-quantity="{{item.quantity}}">Edit Options</button>
+                    {% endif %}
+
+                    <p class="cart__product-meta">
+                      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0">
+                        {{ 'cart.general.remove' | t }}
+                      </a>
+                    </p>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="grid__item large--two-fifths">
+                <div class="grid--full cart__row--table">
+
+                  <div class="grid__item one-third text-center">
+
+                    <label for="updates_{{ item.key }}" class="visually-hidden">{{ 'cart.label.quantity' | t }}</label>
+                    <input type="number" name="updates[]" id="updates_{{ item.key }}" class="cart__product-qty" value="{{ item.quantity }}" min="0" data-id="{{ item.key }}">
+
+                  </div>
+
+                  <div class="grid__item two-thirds text-right">
+                    {% if item.original_line_price != item.line_price %}
+                      <small class="cart__price cart__price--strikethrough">{{ item.original_line_price | money }}</small>
+                    {% endif %}
+
+                    <span class="cart__price"><span class='hulkapps-cart-item-line-price' data-key='{{item.key}}'>{{ item.line_price | money }}</span></span>
+
+                    {% assign discounts_size = item.discounts | size %}
+                    {% if discounts_size > 0 %}
+                      {% for discount in item.discounts %}
+                        <small class="cart__discount">{{ discount.title }}</small>
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        {% endfor %}
+
+        <div class="cart__row">
+          <div class="grid--full cart__row--table-large">
+            {% comment %}
+              Optional, add a textarea for special notes
+                - Your theme settings can turn this on or off. Default is on.
+                - Make sure you have name="note" for the message to be submitted properly
+            {% endcomment %}
+            {% if settings.cart_notes_enable %}
+              <div class="grid__item large--seven-twelfths">
+                <div class="cart__note">
+                  <label for="CartSpecialInstructions">{{ 'cart.general.note' | t }}</label>
+                  <textarea name="note" class="input-full" id="CartSpecialInstructions">{{ cart.note }}</textarea>
+                </div>
+              </div>
+            {% endif %}
+            <div class="grid__item large--five-twelfths text-center large--text-right{% unless settings.cart_notes_enable %} push--large--seven-twelfths{% endunless %}">
+              <div class="grid--full cart__row--table">
+                <div class="grid__item one-half large--two-thirds large--text-center">
+                  <p class="cart__subtotal"><span id="bk-cart-subtotal-label">{{ 'cart.general.subtotal' | t }}</span></p>
+                </div>
+                <div class="grid__item one-half large--one-third">
+                  <p class="cart__subtotal"><span id="bk-cart-subtotal-price"><span class='hulkapps-cart-original-total'>{{ cart.total_price | money }}</span></span></p>
+                </div>
+              </div>
+
+              {% if cart.total_discounts > 0 %}
+                {% assign cartTotalDiscounts = cart.total_discounts | money %}
+                <p class="cart__savings">{{ 'cart.general.savings_html' | t: savings: cartTotalDiscounts }}</p>
+              {% endif %}
+              <p><em>{{ 'cart.general.shipping_at_checkout' | t }}</em></p>
+              <button type="submit" name="update" class="btn--secondary update-cart">{{ 'cart.general.update' | t }}</button>
+              <button type="submit" name="checkout" class="btn cart__checkout">
+                {{ 'cart.general.checkout' | t }} <span class="icon icon-arrow-right" aria-hidden="true"></span>
+              </button>
+
+              {% if additional_checkout_buttons and settings.cart_type != 'drawer' %}
+                <div class="additional_checkout_buttons">{{ content_for_additional_checkout_buttons }}</div>
+              {% endif %}
+            </div>
+          </div>
+
+        </div>
+
+      </form>
+
+    {% else %}
+      {% comment %}
+        The cart is empty
+      {% endcomment %}
+      <header class="section-header text-center">
+        <h1 class="text-center">{{ 'cart.general.title' | t }}</h1>
+        <hr class="hr--small">
+        <p class="cart--empty-message">{{ 'cart.general.empty' | t }}</p>
+        <p class="cart--continue-browsing">{{ 'cart.general.continue_browsing_html' | t }}</p>
+        <p class="cookie-message">{{ 'cart.general.cookies_required' | t }}</p>
+      </header>
+
+    {% endif %}
+  </div>
+</div>
+
+
+<script src="https://widget.sezzle.com/v1/javascript/price-widget?uuid=bef49929-7c19-408c-8cd3-47506566d727"></script>
+
+{% section 'sezzle-widget' %}
+{% section 'sezzle-widget' %}

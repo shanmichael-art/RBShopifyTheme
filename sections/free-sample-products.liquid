@@ -1,0 +1,24 @@
+{% schema %}
+{
+  "name": "Free Sample Products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Our Free Samples"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Free Sample Products",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="sample-products-section">
+  <h2>{{ section.settings.heading }}</h2>
+  <!-- Add more customization options here as needed -->
+</div>

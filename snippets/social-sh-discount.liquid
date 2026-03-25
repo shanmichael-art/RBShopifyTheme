@@ -1,0 +1,3 @@
+<div style="display:none"><ul id="aaa_cart_data" >{% for item in cart.items  %}{% assign product  = item.product %}<li data-url ="{{ product.url}}"  data-img="{{product.featured_image | img_url : "original" }}" data-id="{{ product.id }}" data-quantity ="{{ item.quantity}}"   data-price="{{ product.price }}">{{ product.title }}<div id="aaa-desc">  {{ product.description }}</div></li>{% endfor %}</ul><input type="text"  id="aaa_total_item" value="{{ cart.item_count }}"><input type="text" id="aaa_total_price" value="{{cart.total_price }}"></div>
+  
+

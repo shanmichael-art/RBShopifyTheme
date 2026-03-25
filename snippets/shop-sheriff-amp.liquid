@@ -1,0 +1,14 @@
+{% comment %}Managed by ShopSheriff Shopify app{% endcomment %}
+
+{% if template contains 'product' %}
+  {% unless product.handle.size > 0 %}
+    {% assign denyAmp = true %}
+  {% endunless %}
+  {% assign amp_path = '/products/' | append: product.handle %}
+{% endif %}
+<script type="text/javascript">var _0x26f7=['origin','pathname','utm_source=shopsheriff&utm_medium=amp&utm_campaign=shopsheriff&utm_content=add-to-cart','performance','shopsheriff.amp-snippet.start','/cart','location','referrer','ampproject.org','includes','/a/s/'];(function(_0x2318cc,_0x2742a3){var _0x14a6e6=function(_0x2fe119){while(--_0x2fe119){_0x2318cc['push'](_0x2318cc['shift']());}};_0x14a6e6(++_0x2742a3);}(_0x26f7,0x18f));var _0xd9ee=function(_0x5edbef,_0x2a26a0){_0x5edbef=_0x5edbef-0x0;var _0x56dc59=_0x26f7[_0x5edbef];return _0x56dc59;};var a=window[_0xd9ee('0x0')]&&window[_0xd9ee('0x0')]['mark'];if(a){window[_0xd9ee('0x0')]['mark'](_0xd9ee('0x1'));}var doc=document;var redirect=_0xd9ee('0x2')===window[_0xd9ee('0x3')]['pathname']&&(doc[_0xd9ee('0x4')]['includes'](_0xd9ee('0x5'))||doc[_0xd9ee('0x4')][_0xd9ee('0x6')](_0xd9ee('0x7')))&&!doc[_0xd9ee('0x3')]['search'][_0xd9ee('0x6')]('utm');if(redirect){var f=doc['location']['search']?'&':'?';window['location']=window['location'][_0xd9ee('0x8')]+window[_0xd9ee('0x3')][_0xd9ee('0x9')]+f+_0xd9ee('0xa');}if(a){window[_0xd9ee('0x0')]['mark']('shopsheriff.amp-snippet.end');}</script>
+{% unless denyAmp %}
+{% if amp_path %}
+   <link rel="amphtml" href="{{ 'https://' | append: 'www.royalbeardsmen.com/a/s' | append: amp_path  }}">
+{% endif %}
+{% endunless %}
