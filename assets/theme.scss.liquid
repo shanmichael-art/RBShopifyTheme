@@ -5067,3 +5067,16 @@ h3.rb-diff-heading,
   line-height: 1.2 !important;
   white-space: nowrap;
 }
+
+
+/* ============================================================
+   SCENT GRID — force 2x2 layout for 4 cards
+============================================================ */
+.rb-scent-cards {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+@media screen and (max-width: 590px) {
+  .rb-scent-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
