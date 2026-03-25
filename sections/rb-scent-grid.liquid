@@ -1,0 +1,154 @@
+<div class="rb-scent-grid" data-section-id="{{ section.id }}" data-section-type="rb-scent-grid">
+  <div class="wrapper">
+    <div class="rb-scent-grid-header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="rb-scent-grid-eyebrow">{{ section.settings.eyebrow | upcase | escape }}</p>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2 class="rb-scent-grid-title">{{ section.settings.title | escape }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="rb-scent-cards">
+      {% for block in section.blocks %}
+        {% if block.settings.link != blank %}
+          <a href="{{ block.settings.link }}" class="rb-scent-card" {{ block.shopify_attributes }}>
+        {% else %}
+          <div class="rb-scent-card" {{ block.shopify_attributes }}>
+        {% endif %}
+
+          {% if block.settings.image != blank %}
+            {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+            <div class="rb-scent-card-bg lazyload"
+              data-bgset="{{ img_url }}"
+              data-sizes="auto"
+              data-parent-fit="cover">
+            </div>
+          {% else %}
+            <div class="rb-scent-card-bg" style="background: #1e1e1e;"></div>
+          {% endif %}
+
+          <div class="rb-scent-card-overlay"></div>
+          <div class="rb-scent-card-content">
+            {% if block.settings.category != blank %}
+              <p class="rb-scent-card-name">{{ block.settings.category | escape }}</p>
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3 class="rb-scent-card-title">{{ block.settings.title | escape }}</h3>
+            {% endif %}
+            {% if block.settings.description != blank %}
+              <p class="rb-scent-card-desc">{{ block.settings.description | escape }}</p>
+            {% endif %}
+            {% if block.settings.cta_label != blank %}
+              <span class="rb-scent-card-cta">{{ block.settings.cta_label | escape }}</span>
+            {% endif %}
+          </div>
+
+        {% if block.settings.link != blank %}
+          </a>
+        {% else %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Scent Collection Grid",
+  "class": "index-section rb-scent-grid-section",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Find Your Scent"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section heading",
+      "default": "Every Scent Tells a Story"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "scent",
+      "name": "Scent Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Category / type label",
+          "default": "Beard Oil"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Scent name",
+          "default": "Great Wilderness"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Scent notes",
+          "default": "Cedar · Pine · Morning Air"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Link label",
+          "default": "Shop Now"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scent Collection Grid",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "scent",
+          "settings": {
+            "category": "Beard Oil",
+            "title": "Great Wilderness",
+            "description": "Cedar · Pine · Morning Air",
+            "cta_label": "Shop Now"
+          }
+        },
+        {
+          "type": "scent",
+          "settings": {
+            "category": "Beard Oil",
+            "title": "Leather & Cedar",
+            "description": "Leather · Sandalwood · Cedar",
+            "cta_label": "Shop Now"
+          }
+        },
+        {
+          "type": "scent",
+          "settings": {
+            "category": "Beard Oil",
+            "title": "Midnight Harbor",
+            "description": "Sea Salt · Driftwood · Musk",
+            "cta_label": "Shop Now"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,97 @@
+<div class="rb-process" data-section-id="{{ section.id }}" data-section-type="rb-process">
+  <div class="wrapper">
+    <div class="rb-process-header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="rb-process-eyebrow">{{ section.settings.eyebrow | upcase | escape }}</p>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2 class="rb-process-title">{{ section.settings.title | escape }}</h2>
+      {% endif %}
+    </div>
+
+    <div class="rb-process-steps">
+      {% for block in section.blocks %}
+        <div class="rb-process-step" {{ block.shopify_attributes }}>
+          <div class="rb-process-num">0{{ forloop.index }}</div>
+          {% if block.settings.title != blank %}
+            <p class="rb-process-step-title">{{ block.settings.title | escape }}</p>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            <p class="rb-process-step-desc">{{ block.settings.description | escape }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "The Craft Process",
+  "class": "index-section rb-process-section",
+  "max_blocks": 4,
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "The Craft"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section heading",
+      "default": "Made the Right Way. Every Time."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step title",
+          "default": "Sourced"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Premium carrier oils and organic botanicals, selected for quality and performance."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "The Craft Process",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Sourced",
+            "description": "Premium carrier oils and organic botanicals, hand-selected for quality and performance."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Crafted",
+            "description": "Blended in small batches right here in the USA. No mass production. No shortcuts."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Bottled",
+            "description": "Every bottle is filled, sealed, and inspected by hand before it ships to you."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

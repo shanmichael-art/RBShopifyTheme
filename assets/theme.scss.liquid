@@ -4245,9 +4245,31 @@ div#shopify-section-header.shopify-section {
 }
 
 /* =============================================================================
-   ROYAL BEARDSMEN — Brand Refresh Styles
+   ROYAL BEARDSMEN — Brand Refresh v2
    Premium, masculine, intentional.
 ============================================================================= */
+
+/* --- Kill inter-section gaps for dark sections --- */
+.rb-differentiators-section,
+.rb-scent-feature-section,
+.rb-stats-bar-section,
+.rb-scent-grid-section,
+.rb-process-section,
+.index-newsletter-section {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Adjacent dark sections collapse spacing */
+#shopify-section-rb_differentiators,
+#shopify-section-rb_scent_feature,
+#shopify-section-rb_stats_bar,
+#shopify-section-rb_scent_grid,
+#shopify-section-rb_process,
+#shopify-section-newsletter {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 
 /* --- Hero improvements --- */
 .hero__text-content {
@@ -4315,12 +4337,12 @@ div#shopify-section-header.shopify-section {
 
 /* --- Brand Pillars (rb-differentiators) --- */
 .rb-differentiators-section {
-  background: #111111;
+  background: #1a1a1a;
   padding: 0;
 }
 
 .rb-differentiators {
-  padding: 54px 0;
+  padding: 64px 0;
 }
 
 .rb-differentiators .wrapper {
@@ -4331,55 +4353,74 @@ div#shopify-section-header.shopify-section {
 
 .rb-diff-grid {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0;
+  flex-wrap: nowrap;
+  justify-content: stretch;
 }
 
 .rb-diff-item {
-  flex: 1 1 220px;
-  max-width: 260px;
+  flex: 1 1 0;
   text-align: center;
-  padding: 32px 24px;
-  border-right: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 28px;
+  border-right: 1px solid rgba(201,169,110,0.15);
+  position: relative;
 }
 
 .rb-diff-item:last-child {
   border-right: none;
 }
 
-.rb-diff-icon {
-  font-size: 28px;
-  margin-bottom: 14px;
-  line-height: 1;
+.rb-diff-item::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 2px;
+  background: #c9a96e;
+  margin: 0 auto 20px;
 }
 
 .rb-diff-heading {
   font-family: $accentFontStack;
-  font-size: 12px;
-  letter-spacing: 0.2em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #c9a96e;
-  margin-bottom: 10px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
 
 .rb-diff-subtext {
+  font-family: $bodyFontStack;
   font-size: 13px;
-  color: rgba(255,255,255,0.58);
-  line-height: 1.6;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
   margin: 0;
 }
 
-@media screen and (max-width: 590px) {
+@media screen and (max-width: 768px) {
   .rb-diff-grid {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
   }
   .rb-diff-item {
+    flex: 1 1 50%;
+    border-right: 1px solid rgba(201,169,110,0.12);
+    border-bottom: 1px solid rgba(201,169,110,0.12);
+  }
+  .rb-diff-item:nth-child(2n) {
     border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    max-width: 100%;
-    width: 100%;
+  }
+  .rb-diff-item:nth-child(3),
+  .rb-diff-item:nth-child(4) {
+    border-bottom: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .rb-diff-item {
+    flex: 1 1 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(201,169,110,0.12);
+    padding: 32px 24px;
   }
   .rb-diff-item:last-child {
     border-bottom: none;
@@ -4568,4 +4609,318 @@ div#shopify-section-header.shopify-section {
 /* --- Utility: visually separate sections with breathing room --- */
 .index-section {
   margin-top: 0;
+}
+
+/* =============================================================================
+   NEW SECTIONS — Stats Bar, Scent Grid, Process Strip
+============================================================================= */
+
+/* --- Stats Bar (rb-stats-bar) --- */
+.rb-stats-bar-section {
+  background: #c9a96e;
+  padding: 0;
+}
+
+.rb-stats-bar {
+  padding: 18px 30px;
+}
+
+.rb-stats-bar .wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.rb-stats-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.rb-stat-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 32px;
+  border-right: 1px solid rgba(17,17,17,0.2);
+  white-space: nowrap;
+}
+
+.rb-stat-item:last-child {
+  border-right: none;
+}
+
+.rb-stat-item span {
+  font-family: $accentFontStack;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111111;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 590px) {
+  .rb-stats-inner {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .rb-stat-item {
+    border-right: none;
+    padding: 4px 16px;
+  }
+}
+
+/* --- Scent Grid (rb-scent-grid) --- */
+.rb-scent-grid-section {
+  background: #111111;
+  padding: 0;
+}
+
+.rb-scent-grid {
+  padding: 80px 0;
+}
+
+.rb-scent-grid .wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.rb-scent-grid-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.rb-scent-grid-eyebrow {
+  font-family: $accentFontStack;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  margin-bottom: 12px;
+}
+
+.rb-scent-grid-title {
+  font-family: $headerFontStack;
+  font-size: 36px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.rb-scent-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+
+.rb-scent-card {
+  position: relative;
+  background: #1e1e1e;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.rb-scent-card:hover {
+  transform: translateY(-3px);
+}
+
+.rb-scent-card-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.rb-scent-card:hover .rb-scent-card-bg {
+  transform: scale(1.04);
+}
+
+.rb-scent-card-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.1) 55%, transparent 100%);
+}
+
+.rb-scent-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 28px 24px;
+}
+
+.rb-scent-card-name {
+  font-family: $accentFontStack;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  margin-bottom: 6px;
+}
+
+.rb-scent-card-title {
+  font-family: $headerFontStack;
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.rb-scent-card-desc {
+  font-size: 13px;
+  color: rgba(255,255,255,0.62);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.rb-scent-card-cta {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: $accentFontStack;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  border-bottom: 1px solid rgba(201,169,110,0.4);
+  padding-bottom: 2px;
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+
+.rb-scent-card:hover .rb-scent-card-cta {
+  border-color: #c9a96e;
+}
+
+@media screen and (max-width: 768px) {
+  .rb-scent-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .rb-scent-cards {
+    grid-template-columns: 1fr;
+  }
+  .rb-scent-card {
+    min-height: 260px;
+  }
+  .rb-scent-grid-title {
+    font-size: 28px;
+  }
+}
+
+/* --- Process Strip (rb-process) --- */
+.rb-process-section {
+  background: #f7f5f0;
+  padding: 0;
+}
+
+.rb-process {
+  padding: 80px 0;
+}
+
+.rb-process .wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.rb-process-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.rb-process-eyebrow {
+  font-family: $accentFontStack;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #c9a96e;
+  margin-bottom: 10px;
+}
+
+.rb-process-title {
+  font-family: $headerFontStack;
+  font-size: 34px;
+  color: #111111;
+  margin: 0;
+}
+
+.rb-process-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  gap: 0;
+}
+
+.rb-process-steps::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 16.6%;
+  right: 16.6%;
+  height: 1px;
+  background: rgba(201,169,110,0.3);
+  z-index: 0;
+}
+
+.rb-process-step {
+  flex: 1;
+  text-align: center;
+  padding: 0 28px;
+  position: relative;
+  z-index: 1;
+}
+
+.rb-process-num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid #c9a96e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  background: #f7f5f0;
+  font-family: $accentFontStack;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #c9a96e;
+  font-weight: 600;
+}
+
+.rb-process-step-title {
+  font-family: $accentFontStack;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111111;
+  margin-bottom: 10px;
+}
+
+.rb-process-step-desc {
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media screen and (max-width: 590px) {
+  .rb-process-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .rb-process-steps::before {
+    display: none;
+  }
+  .rb-process-step {
+    max-width: 300px;
+  }
 }
