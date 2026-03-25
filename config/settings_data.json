@@ -1,1 +1,1352 @@
-{"current":{"color_body_bg":"#ffffff","color_headings":"#111111","color_body_text":"#2a2a2a","color_borders":"#1c1d1d","color_button_text":"#ffffff","color_primary":"#c9a96e","color_secondary":"#8b6914","color_product_background":"rgba(0,0,0,0)","color_sale_tag":"#990000","color_input":"#f0eeeb","color_newsletter":"#111111","color_drawer_background":"#0f0f0f","color_drawer_text":"#ffffff","color_drawer_border":"#1e1e1e","color_drawer_button":"#c9a96e","color_drawer_button_text":"#111111","type_header_family":"Google_Playfair+Display_700_serif","type_header_base_size":"32px","type_header_border_thickness":"1px","type_accent_family":"Google_Oswald_400_sans","type_accent_transform":true,"type_accent_spacing":true,"type_accent_subheadings":true,"type_base_family":"Google_Lato_400_sans","type_base_size":"16px","type_base_italize_titles":false,"cart_type":"page","cart_notes_enable":false,"share_image":"","social_facebook_link":"https://www.facebook.com/royalbeardsmen/","social_twitter_link":"","social_pinterest_link":"","social_instagram_link":"https://instagram.com/royalbeardsmen","social_snapchat_link":"","social_google_plus_link":"","social_tumblr_link":"","social_youtube_link":"","social_vimeo_link":"","social_fancy_link":"","share_facebook":true,"share_twitter":true,"share_pinterest":true,"favicon":"shopify://shop_images/Royal-Beardsmen-Logo-Badge.png","checkout_header_image":"","checkout_logo_image":"shopify://shop_images/Beardsman-Badge-Black-EPS.png","checkout_logo_position":"center","checkout_logo_size":"large","checkout_body_background_image":"","checkout_body_background_color":"#ffffff","checkout_input_background_color_mode":"white","checkout_sidebar_background_image":"","checkout_sidebar_background_color":"#ffffff","checkout_heading_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'","checkout_body_font":"-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'","checkout_accent_color":"#e46c17","checkout_button_color":"#6dbb50","checkout_error_color":"#e32c2b","checkout_banner_background_color":"#fff","checkout_call_to_action_color":"#a26b25","checkout_use_header_image":false,"collection_products_grid":"collage","customer_layout":"customer_area","favicon_enable":false,"product_vendor_enable":false,"social_sharing_style":"clean","sections":{"header":{"type":"header","settings":{"main_menu_link_list":"main-menu","logo":"shopify://shop_images/Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Blue_Wood.png","logo-inverted":"shopify://shop_images/Royal-Beardsmen-Logo-Badge.png","logo_max_width":"300","search":"modal","show_announcement":true,"home_page_only":false,"text":"FREE USA SHIPPING ON ORDERS OVER $50 — HANDCRAFTED IN SMALL BATCHES","link":"","color_bg":"#111111","color_text":"#c9a96e"}},"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"slide","settings":{"image":"shopify://shop_images/Copy_of_Copy_of_The_Great_Wilderness.png","color_image_overlay":"#0a0a0a","image_overlay_opacity":60,"slide_subheading":"Great Wilderness · Legends · Leisure · Grief","slide_heading":"The Beard Deserves Better.","slide_cta":"Shop Beard Oils","slide_link":"shopify://collections/beard-oil"}}},"block_order":["slideshow-0"],"settings":{"hero_home_auto":true,"home_hero_auto_speed":"7000","slide_text_color":"#ffffff","slide_button_label_color":"#111111","slide_button_background_color":"#c9a96e"}},"newsletter":{"type":"newsletter","settings":{"heading":"Join the Brotherhood.","subheading":"Early drops, exclusive deals, and straight talk about grooming — no spam, no fluff."}},"drawer-menu":{"type":"drawer-menu","settings":{"drawer_top_link_list":"main-menu","drawer_bottom_link_list":"footer","drawer_search_enable":false}},"footer":{"type":"footer","settings":{"footer_link_list":"footer"}},"collection-template":{"type":"collection-template","settings":{"collection_products_grid":"grid","collection_sort_enable":true,"collection_tags_enable":false,"product_vendor_enable":true}},"product-template":{"type":"product-template","settings":{"zoom_enable":true,"social_sharing_products":true,"product_vendor_enable":true,"image_layout":"thumbnails","quantity_enabled":true,"product_selector":"select","add_to_cart_button_size":"small"}},"password-header":{"type":"password-header","settings":{"logo":"shopify://shop_images/Royal_Beardsmen_Logo_Edited_background_003f4801-de8c-4abf-b31d-263de7f94471.png","logo_max_width":"225"}},"password-content":{"type":"password-content","settings":{"title":"Coming Soon","newsletter_enable":true,"newsletter_form_heading":"Be the first to know when we launch.","newsletter_placeholder":"Email address","newsletter_button_text":"Submit","show_share_buttons":true,"social_message":"Spread the word"}},"1528814098932":{"type":"featured-collections","blocks":{"1528814098932-1":{"type":"collection","settings":{"collection":"beard-oil"}},"1528814098932-0":{"type":"collection","settings":{"collection":"beard-balm"}},"1560537515293":{"type":"collection","settings":{"collection":"beard-butter"}},"1528814098932-2":{"type":"collection","disabled":true,"settings":{"collection":"bundles"}},"1550071562111":{"type":"collection","settings":{"collection":"beard-grooming"}},"1550071597526":{"type":"collection","settings":{"collection":"shampoo-and-conditioner"}}},"block_order":["1528814098932-1","1528814098932-0","1560537515293","1528814098932-2","1550071562111","1550071597526"],"settings":{"title":"The Full Lineup"}},"1528814116633":{"type":"featured-products","settings":{"title":"The 2oz Lineup","home_featured_products":"premium-2oz-beard-oils","collection_products_grid":"grid"}},"1528814140978":{"type":"featured-row","settings":{"image":"shopify://shop_images/MG_9400.jpg","layout":"left","title":"Two ounces. Same price.","text":"<p>Most beard oils come in 1oz bottles. Ours come in 2oz — packed with premium carrier oils and zero filler. We would rather give you more product at the same price than charge you twice for half as much. That is not a promotion. That is just how we build things.</p>","button_label":"Shop Beard Oils","button_link":"shopify://collections/beard-oil"}},"1528814153986":{"type":"featured-content","settings":{"home_page_full_width":true,"section_title":"We got tired of bad beard oil.","text":"<p>The industry standard is a 1oz bottle of watered-down oil with a label that costs more than what's inside. We built Royal Beardsmen because we could not find a product we actually wanted to use every day. Every formula is handcrafted in Spring Hill, Florida, in small batches, with ingredients we stand behind completely. If it's not good enough to put on our own face — it does not ship.</p>","text_size":"large"}},"list-collections-template":{"type":"list-collections-template","blocks":{"1528823823804":{"type":"collection","settings":{"collection":"beard-oil"}},"1528823791612":{"type":"collection","settings":{"collection":"beard-balm"}},"35b0cd43-8d35-41e1-a77f-e4af91892419":{"type":"collection","settings":{"collection":"beard-butter"}}},"block_order":["1528823823804","1528823791612","35b0cd43-8d35-41e1-a77f-e4af91892419"],"settings":{"display_type":"selected","sort":"alphabetical"}},"featured-row":{"type":"featured-row","settings":{"image":"","layout":"left","title":"","text":"","button_label":"","button_link":""}},"related-products":{"type":"related-products","settings":{"show_related_products":true,"related_title":"Similar Products","related_grid_num":"3","related_grid_row":"1"}},"1530578972178":{"type":"featured-row","settings":{"image":"shopify://shop_images/OBOMT60.jpg","layout":"right","title":"Your beard says something about you.","text":"<p>Not everyone grows a beard. Even fewer grow one on purpose. A well-kept beard is a form of self-respect — it takes intention, the right products, and about three minutes a day. Royal Beardsmen exists for the man who gets that.</p>","button_label":"Our Story","button_link":"shopify://pages/about-us"}},"1531968408862":{"type":"featured-product","settings":{"featured_product":"no-shave-life-t-shirt","show_variant_labels":true,"show_vendor":true,"show_share_buttons":true}},"1534902520451":{"type":"advanced-content","blocks":{"html_rgFrEF":{"type":"html","settings":{"code":"<div style=\"text-align:center;\">\n<h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers.</div>","width":"100%","alignment":"top-middle"}},"1534902520451-0":{"type":"html","settings":{"code":"<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Money-Back-Gurantee_1080x.png?v=1534895522%0A\" width=\"280px/\">\n</div>","width":"100%","alignment":"top-middle"}}},"block_order":["html_rgFrEF","1534902520451-0"],"disabled":true,"settings":{}},"1535591174721":{"type":"featured-blog","settings":{"title":"Royal Beardsmen Blog","blog":"the-royal-beardsmen-blog","post_limit":1,"blog_show_date":true,"blog_show_author":true,"blog_show_image":true,"blog_show_excerpt":true,"show_view_all":false}},"article-template":{"type":"article-template","settings":{"social_sharing_blog":true,"show_author":true}},"1550071410545":{"type":"advanced-content","blocks":{"1550071410545-0":{"type":"html","settings":{"code":"<div id=\"insta-feed\"></div>","width":"100%","alignment":"top-middle"}}},"block_order":["1550071410545-0"],"settings":{}},"1560536999699":{"type":"advanced-content","blocks":{"1560536999699-0":{"type":"html","settings":{"code":"<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/3A36BA85-3AAB-4515-B564-8BD36A2CBBEA.png?802\" width=\"450px/\">\n</div>","width":"100%","alignment":"top-middle"}}},"block_order":["1560536999699-0"],"settings":{}},"1572907306577":{"type":"advanced-content","blocks":{"html_GWXcdH":{"type":"html","disabled":true,"settings":{"code":"<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Untitled_design_2.png?v=1763995595\">\n</div>","width":"100%","alignment":"top-middle"}},"1572907496579":{"type":"html","disabled":true,"settings":{"code":"<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Untitled_5.jpg?v=1700435895\">\n</div>","width":"100%","alignment":"top-middle"}},"html_yqjeaj":{"type":"html","disabled":true,"settings":{"code":"<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/Legends\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/eb7b860c-cd87-42fa-98d9-62ba366fc8ad.png?v=1751649635\"></a>\n</div>","width":"100%","alignment":"top-middle"}},"cfe2420d-23bd-4944-80db-b570d222a873":{"type":"html","disabled":true,"settings":{"code":"<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/leisure\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled_1.png?v=1671376658\"></a>\n</div>","width":"100%","alignment":"top-middle"}},"html_BgUQ9F":{"type":"html","disabled":true,"settings":{"code":"<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/grief\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled.webp?v=1729278135\"></a>\n</div>","width":"100%","alignment":"top-middle"}}},"block_order":["html_GWXcdH","1572907496579","html_yqjeaj","cfe2420d-23bd-4944-80db-b570d222a873","html_BgUQ9F"],"disabled":true,"settings":{}},"1573519702600":{"type":"featured-content","disabled":true,"custom_css":["h2 {color: red !important;}"],"settings":{"home_page_full_width":true,"section_title":"FREE BEARD OIL IN CART","text":"<p>Just add items to your cart to reach the Free Beard Oil Goal</p>","text_size":"large"}},"1574745491524":{"type":"judgeme_carousel_section","settings":{"maxwidth":1080}},"1574807615550":{"type":"advanced-content","blocks":{"1574807615550-0":{"type":"html","settings":{"code":"<div class=\"fb-like\" data-href=\"https://www.facebook.com/royalbeardsmen/\" data-width=\"\" data-layout=\"standard\" data-action=\"like\" data-size=\"large\" data-show-faces=\"true\" data-share=\"true\"></div>","width":"100%","alignment":"top-middle"}}},"block_order":["1574807615550-0"],"settings":{}},"1593730374213":{"type":"advanced-content","blocks":{"1593730374213-0":{"type":"html","settings":{"code":"<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/bundles\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled.jpg?v=1593729751\"></a>\n</div>","width":"100%","alignment":"top-middle"}}},"block_order":["1593730374213-0"],"disabled":true,"settings":{}},"1640132073e6539d7f":{"type":"map","disabled":true,"settings":{"heading":"Royal Beardsmen Beard SHop","address":"<p>1401 Kass Circle Spring Hill, FL 34606</p><p>Tue - Sat, 10am - 6pm<br/>Sun & Mon, Closed</p>","map_address":"1401 Kass Cir, Spring Hill, FL 34606","button_text":"Get directions","show_pin":true,"api_key":"AIzaSyBR0OKJQNTB0KU5ZhciFkGrWeYo3ssrrQE","background_image":"shopify://shop_images/IMG_5667.jpg","background_image_position":"center center"}},"sezzle-widget":{"type":"sezzle-widget","settings":{"show-sezzle-widget":false,"color":"inherit","font-size":14,"font-family":"inherit","product-page-alignment":"auto","cart-page-alignment":"auto"}},"97d4fcf3-4301-4ea1-91f2-c651f2ca3959":{"type":"featured-products","settings":{"title":"**NEW PRODUCT ALERT**","home_featured_products":"leisure","collection_products_grid":"collage"}},"featured_content_GKWJiV":{"type":"featured-content","disabled":true,"settings":{"home_page_full_width":false,"section_title":"TAKE 15% ALL WEEK LONG","text":"<p>Use code <strong>BFCM25 </strong>to earn huge savings plus take advantage of all the freebies below! <strong>Just start adding to cart to unlock rewards</strong></p>","text_size":"large"}},"rb_differentiators":{"type":"rb-differentiators","blocks":{"rb-diff-1":{"type":"pillar","settings":{"heading":"Made in the USA","subtext":"Blended in Spring Hill, Florida. Not a warehouse. Not overseas. By people who actually use it."}},"rb-diff-2":{"type":"pillar","settings":{"heading":"All Natural","subtext":"Pure carrier oils. Organic botanicals. No synthetics, no fillers, nothing you cannot pronounce."}},"rb-diff-3":{"type":"pillar","settings":{"heading":"Twice the Size","subtext":"Our oils come in 2oz bottles. The industry standard is 1oz. Do the math — you are already ahead."}},"rb-diff-4":{"type":"pillar","settings":{"heading":"100% Backed","subtext":"Not satisfied? We fix it. No forms, no runaround — a straight answer and a real solution."}}},"block_order":["rb-diff-1","rb-diff-2","rb-diff-3","rb-diff-4"],"settings":{}},"rb_scent_feature":{"type":"rb-scent-feature","settings":{"eyebrow":"The Signature","heading":"Close your eyes.","scent_name":"Great Wilderness","description":"Cedar. Pine. The kind of morning air that exists before the rest of the world wakes up. This is the scent that built Royal Beardsmen — and the one men keep coming back for.","cta_label":"Shop Great Wilderness","cta_link":"shopify://collections/beard-oil"}},"rb_stats_bar":{"type":"rb-stats-bar","blocks":{"rb-stat-1":{"type":"stat","settings":{"stat":"★★★★★  4.9 / 5 Average Rating"}},"rb-stat-2":{"type":"stat","settings":{"stat":"2,500+ Verified Reviews"}},"rb-stat-3":{"type":"stat","settings":{"stat":"100% USA Handcrafted"}},"rb-stat-4":{"type":"stat","settings":{"stat":"Free Shipping Over $50"}}},"block_order":["rb-stat-1","rb-stat-2","rb-stat-3","rb-stat-4"],"settings":{}},"rb_scent_grid":{"type":"rb-scent-grid","blocks":{"rb-scent-gw":{"type":"scent","settings":{"color_scheme":"forest","raw_image_url":"","image":"","product_type":"Beard Oil","title":"Great Wilderness","tagline":"The one that started it all.","notes":"Cedar · Pine · Cold Morning Air","cta_label":"Shop Now","link":"shopify://collections/beard-oil"}},"rb-scent-leg":{"type":"scent","settings":{"color_scheme":"amber","image":"","raw_image_url":"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/eb7b860c-cd87-42fa-98d9-62ba366fc8ad.png","product_type":"Beard Oil","title":"Legends","tagline":"Made for the man who earns his place.","notes":"Rich · Deep · Complex","cta_label":"Shop Now","link":"shopify://collections/beard-oil"}},"rb-scent-lei":{"type":"scent","settings":{"color_scheme":"slate","image":"","raw_image_url":"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled_1.png","product_type":"Beard Oil","title":"Leisure","tagline":"The everyday carry. Easy on, confident all day.","notes":"Clean · Relaxed · Warm","cta_label":"Shop Now","link":"shopify://collections/leisure"}},"rb-scent-grief":{"type":"scent","settings":{"color_scheme":"smoke","image":"","raw_image_url":"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled.webp","product_type":"Beard Oil","title":"Grief","tagline":"Dark, heavy, unforgettable.","notes":"Bold · Dark · Commanding","cta_label":"Shop Now","link":"shopify://collections/grief"}}},"block_order":["rb-scent-gw","rb-scent-leg","rb-scent-lei","rb-scent-grief"],"settings":{"eyebrow":"The Line","title":"Find Your Scent","subtitle":"Every name means something. Find the world that fits yours."}},"rb_process":{"type":"rb-process","blocks":{"rb-step-1":{"type":"step","settings":{"title":"Sourced","description":"We select premium carrier oils and organic botanicals for their performance on beard hair and skin — not because they're cheap."}},"rb-step-2":{"type":"step","settings":{"title":"Blended","description":"Every formula is blended in small batches in Spring Hill, Florida. One batch at a time. Every time."}},"rb-step-3":{"type":"step","settings":{"title":"Delivered","description":"Filled, sealed, and inspected by hand. In a 2oz bottle — because cutting you short was never an option."}}},"block_order":["rb-step-1","rb-step-2","rb-step-3"],"settings":{"eyebrow":"How It's Made","title":"Small Batches. Real Care."}},"rb_manifesto":{"type":"rb-manifesto","settings":{"kicker":"The Standard","quote":"The difference between a good beard and a great one is about three minutes a day.","subtext":"We make those three minutes worth it. Royal Beardsmen — Spring Hill, FL."}},"rb_identity":{"type":"rb-identity","blocks":{"rb-id-1":{"type":"line","settings":{"line":"Grew a beard on purpose and takes care of it the same way"}},"rb-id-2":{"type":"line","settings":{"line":"Wants a scent that actually means something, not just smells like soap"}},"rb-id-3":{"type":"line","settings":{"line":"Knows the difference between cheap grooming products and the real thing"}},"rb-id-4":{"type":"line","settings":{"line":"Holds himself to a standard in the gym, at work, in the mirror"}},"rb-id-5":{"type":"line","settings":{"line":"Finishes what he starts"}},"rb-id-6":{"type":"line","settings":{"line":"Understands that a well-kept beard is a statement, not vanity"}}},"block_order":["rb-id-1","rb-id-2","rb-id-3","rb-id-4","rb-id-5","rb-id-6"],"settings":{"eyebrow":"Who This Is For","heading":"This is for the man who.","cta_label":"Shop the Collection","cta_link":"shopify://collections/beard-oil"}}},"content_for_index":["1528814116633","rb_stats_bar","rb_differentiators","rb_manifesto","rb_scent_grid","1574745491524","rb_process","rb_identity","1528814153986","1530578972178","1528814140978","1528814098932","1550071410545","newsletter"],"blocks":{"11349500561483629931":{"type":"shopify://apps/ReStock/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054","disabled":false,"settings":{}},"6810535121229352664":{"type":"shopify://apps/monster-cart-upsell-free-gifts/blocks/app-embed/a1b8e58a-bf1d-4e0f-8768-a387c3f643c0","disabled":false,"settings":{"markets_rounding":false,"send_gtag_atc":false,"disable_tiktok_tracking":false,"disable_klaviyo_tracking":false,"stop_cart_page":false,"apply_discount_before_checkout":false,"bag_selector":"","hide_when_opened":"","show_item_properties":false,"stop_shopify_rate":false,"dev_mode":false,"beta_version":false,"custom_code":"<script>\n    // custom code here\n</script>"}},"3297818543141111005":{"type":"shopify://apps/ultimate-product-icons/blocks/app-embed-block/42c1dd38-3f32-4069-9b37-3ccc8e6db688","disabled":true,"settings":{}},"14060646107696862457":{"type":"shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8","disabled":true,"settings":{}},"9094328589753815681":{"type":"shopify://apps/hextom-shipping-bar/blocks/fsb-embeded-block/7ef5d9af-75a2-45c7-9b1b-f9240ee488e9","disabled":false,"settings":{}},"1513253815146976218":{"type":"shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9","disabled":false,"settings":{}},"341186785192672687":{"type":"shopify://apps/seal-subscriptions/blocks/subscription-script-append/13b25004-a140-4ab7-b5fe-29918f759699","disabled":false,"settings":{}},"6012664788653924950":{"type":"shopify://apps/mps-buy-me/blocks/app-embed/da5cef02-d610-4c52-adf7-383273d1f67b","disabled":false,"settings":{}},"10431957531522714341":{"type":"shopify://apps/seowill-image/blocks/pagespeed-preloading/b6edaf80-ee08-4404-951c-d8f577b5c1b1","disabled":false,"settings":{}},"6174324309569838175":{"type":"shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6","disabled":false,"settings":{}}}},"presets":{"Classic":{"cart_type":"drawer","cart_notes_enable":false,"checkout_accent_color":"#a26b25","checkout_banner_background_color":"#fff","checkout_button_color":"#000000","checkout_call_to_action_color":"#a26b25","checkout_use_header_image":false,"collection_products_grid":"collage","color_body_bg":"#ffffff","color_body_text":"#222323","color_borders":"#1c1d1d","color_button_text":"#ffffff","color_drawer_background":"#1c1d1d","color_drawer_border":"#343535","color_drawer_button":"#a26b25","color_drawer_button_text":"#ffffff","color_drawer_text":"#ffffff","color_headings":"#222323","color_input":"#f6f6f6","color_newsletter":"#f6f6f6","color_primary":"#1c1d1d","color_product_background":"#f7f7f7","color_sale_tag":"#990000","color_secondary":"#a26b25","customer_layout":"customer_area","favicon_enable":false,"product_vendor_enable":false,"share_facebook":true,"share_pinterest":true,"share_twitter":true,"social_sharing_style":"clean","type_accent_family":"Google_Montserrat_400_sans","type_accent_spacing":true,"type_accent_transform":true,"type_accent_subheadings":true,"type_base_family":"Google_Arapey_400_serif","type_base_italize_titles":true,"type_base_size":"16px","type_header_base_size":"30px","type_header_border_thickness":"1px","type_header_family":"Google_Old+Standard+TT_400_serif","sections":{"header":{"type":"header","settings":{"show_announcement":true,"color_bg":"#1c1d1d","color_text":"#ffffff"}},"slideshow":{"type":"slideshow","blocks":{"slideshow-0":{"type":"slide","settings":{}},"slideshow-1":{"type":"slide","settings":{}}},"block_order":["slideshow-0","slideshow-1"],"settings":{}},"featured-products":{"type":"featured-products","settings":{"home_featured_products":"frontpage"}},"featured-content":{"type":"featured-content","settings":{}},"featured-collections":{"type":"featured-collections","blocks":{"featured-collections-0":{"type":"collection","settings":{}},"featured-collections-1":{"type":"collection","settings":{}},"featured-collections-2":{"type":"collection","settings":{}}},"block_order":["featured-collections-0","featured-collections-1","featured-collections-2"],"settings":{}},"newsletter":{"type":"newsletter","settings":{}}},"content_for_index":["featured-content","featured-collections","featured-products","newsletter"]},"Playful":{"color_body_bg":"#ffffff","color_body_text":"#565656","color_borders":"#5dd2b4","color_button_text":"#003b34","color_primary":"#5dd2b4","color_secondary":"#058677","color_product_background":"#fff4f6","color_sale_tag":"#e80970","color_input":"#f6f6f6","color_newsletter":"#bde9f2","color_drawer_background":"#360f5f","color_drawer_text":"#ffffff","color_drawer_border":"#50297a","color_drawer_button":"#5dd2b4","color_drawer_button_text":"#360f5f","color_headings":"#321863","type_header_family":"Google_Quicksand_700_sans","type_header_base_size":"38px","type_header_border_thickness":"1px","type_accent_family":"Google_Roboto_700_sans","type_accent_transform":true,"type_accent_spacing":true,"type_accent_subheadings":false,"type_base_family":"'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif","type_base_size":"17px","type_base_italize_titles":false,"cart_type":"drawer","cart_notes_enable":true,"social_facebook_link":"","social_twitter_link":"","social_pinterest_link":"","social_instagram_link":"","social_snapchat_link":"","social_google_plus_link":"","social_tumblr_link":"","social_youtube_link":"","social_vimeo_link":"","social_fancy_link":"","share_facebook":true,"share_twitter":true,"share_pinterest":true,"favicon":"","checkout_header_image":"","checkout_logo_image":"","checkout_logo_position":"left","checkout_logo_size":"small","checkout_body_background_image":"","checkout_body_background_color":"#ffffff","checkout_input_background_color_mode":"white","checkout_sidebar_background_image":"","checkout_sidebar_background_color":"#fff4f6","checkout_heading_font":"Helvetica Neue","checkout_body_font":"Roboto","checkout_accent_color":"#0d8d7e","checkout_button_color":"#5dd2b4","checkout_error_color":"#f01130","checkout_banner_background_color":"#fff","checkout_call_to_action_color":"#a26b25","checkout_use_header_image":false,"collection_products_grid":"collage","customer_layout":"customer_area","favicon_enable":false,"product_vendor_enable":false,"social_sharing_style":"clean","sections":{"slideshow":{"type":"slideshow","blocks":{"1495823280244":{"type":"slide","settings":{}}},"block_order":["1495823280244"],"settings":{"hero_home_auto":false,"home_hero_auto_speed":"5000"}},"featured-products":{"type":"featured-products","settings":{"home_featured_products":"frontpage","collection_products_grid":"collage"}},"newsletter":{"type":"newsletter","settings":{}},"drawer-menu":{"type":"drawer-menu","settings":{"drawer_top_link_list":"main-menu","drawer_bottom_link_list":"footer","drawer_search_enable":false}},"header":{"type":"header","settings":{"main_menu_link_list":"main-menu","logo_max_width":"260","search":"modal","show_announcement":false,"color_bg":"#290c49","color_text":"#ffffff"}},"footer":{"type":"footer","settings":{"footer_link_list":"footer"}},"collection-template":{"type":"collection-template","settings":{"collection_products_grid":"grid","collection_tags_enable":false,"product_vendor_enable":false}},"1494860348200":{"type":"featured-row","settings":{"layout":"right"}},"1494894035034":{"type":"featured-row","settings":{"layout":"left"}},"product-template":{"type":"product-template","settings":{"zoom_enable":false,"social_sharing_products":true,"product_vendor_enable":false}},"1496078102297":{"type":"advanced-content","blocks":{"1496078102297-0":{"type":"html","settings":{"code":"<div style=\"text-align:center;\">\n<h1 class=\"h1\">Use HTML to format your text so it can be easily read.</h1>This text can be used to share information about your brand with customers.</div>","width":"100%","alignment":"top-middle"}}},"block_order":["1496078102297-0"],"settings":{}},"1496177901425":{"type":"advanced-content","blocks":{"1496177901425-0":{"type":"html","settings":{"code":"<div style=\"width:745px;text-align: center; margin: 0 auto;\">This text can be used to share information about your brand with customers.</div>","width":"100%","alignment":"top-middle"}}},"block_order":["1496177901425-0"],"settings":{}}},"content_for_index":["1496177901425","featured-products","newsletter","1496078102297","1494860348200","1494894035034"]}}}
+{
+  "current": {
+    "color_body_bg": "#ffffff",
+    "color_headings": "#111111",
+    "color_body_text": "#2a2a2a",
+    "color_borders": "#1c1d1d",
+    "color_button_text": "#ffffff",
+    "color_primary": "#c9a96e",
+    "color_secondary": "#8b6914",
+    "color_product_background": "rgba(0,0,0,0)",
+    "color_sale_tag": "#990000",
+    "color_input": "#f0eeeb",
+    "color_newsletter": "#111111",
+    "color_drawer_background": "#0f0f0f",
+    "color_drawer_text": "#ffffff",
+    "color_drawer_border": "#1e1e1e",
+    "color_drawer_button": "#c9a96e",
+    "color_drawer_button_text": "#111111",
+    "type_header_family": "Google_Playfair+Display_700_serif",
+    "type_header_base_size": "32px",
+    "type_header_border_thickness": "1px",
+    "type_accent_family": "Google_Oswald_400_sans",
+    "type_accent_transform": true,
+    "type_accent_spacing": true,
+    "type_accent_subheadings": true,
+    "type_base_family": "Google_Lato_400_sans",
+    "type_base_size": "16px",
+    "type_base_italize_titles": false,
+    "cart_type": "page",
+    "cart_notes_enable": false,
+    "share_image": "",
+    "social_facebook_link": "https://www.facebook.com/royalbeardsmen/",
+    "social_twitter_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https://instagram.com/royalbeardsmen",
+    "social_snapchat_link": "",
+    "social_google_plus_link": "",
+    "social_tumblr_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_fancy_link": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "favicon": "shopify://shop_images/Royal-Beardsmen-Logo-Badge.png",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify://shop_images/Beardsman-Badge-Black-EPS.png",
+    "checkout_logo_position": "center",
+    "checkout_logo_size": "large",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#ffffff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#ffffff",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#e46c17",
+    "checkout_button_color": "#6dbb50",
+    "checkout_error_color": "#e32c2b",
+    "checkout_banner_background_color": "#fff",
+    "checkout_call_to_action_color": "#a26b25",
+    "checkout_use_header_image": false,
+    "collection_products_grid": "collage",
+    "customer_layout": "customer_area",
+    "favicon_enable": false,
+    "product_vendor_enable": false,
+    "social_sharing_style": "clean",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_menu_link_list": "main-menu",
+          "logo": "shopify://shop_images/Copy_of_Copy_of_Copy_of_Copy_of_Copy_of_Blue_Wood.png",
+          "logo-inverted": "shopify://shop_images/Royal-Beardsmen-Logo-Badge.png",
+          "logo_max_width": "300",
+          "search": "modal",
+          "show_announcement": true,
+          "home_page_only": false,
+          "text": "FREE USA SHIPPING ON ORDERS OVER $50 — HANDCRAFTED IN SMALL BATCHES",
+          "link": "",
+          "color_bg": "#111111",
+          "color_text": "#c9a96e"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "slide",
+            "settings": {
+              "image": "shopify://shop_images/Copy_of_Copy_of_The_Great_Wilderness.png",
+              "color_image_overlay": "#0a0a0a",
+              "image_overlay_opacity": 60,
+              "slide_subheading": "Great Wilderness · Legends · Leisure · Grief",
+              "slide_heading": "The Beard Deserves Better.",
+              "slide_cta": "Shop Beard Oils",
+              "slide_link": "shopify://collections/beard-oil"
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0"
+        ],
+        "settings": {
+          "hero_home_auto": true,
+          "home_hero_auto_speed": "7000",
+          "slide_text_color": "#ffffff",
+          "slide_button_label_color": "#111111",
+          "slide_button_background_color": "#c9a96e"
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "heading": "Join the Brotherhood.",
+          "subheading": "Early drops, exclusive deals, and straight talk about grooming — no spam, no fluff."
+        }
+      },
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "settings": {
+          "drawer_top_link_list": "main-menu",
+          "drawer_bottom_link_list": "footer",
+          "drawer_search_enable": false
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_link_list": "footer"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "collection_products_grid": "grid",
+          "collection_sort_enable": true,
+          "collection_tags_enable": false,
+          "product_vendor_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "zoom_enable": true,
+          "social_sharing_products": true,
+          "product_vendor_enable": true,
+          "image_layout": "thumbnails",
+          "quantity_enabled": true,
+          "product_selector": "select",
+          "add_to_cart_button_size": "small"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "shopify://shop_images/Royal_Beardsmen_Logo_Edited_background_003f4801-de8c-4abf-b31d-263de7f94471.png",
+          "logo_max_width": "225"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "title": "Coming Soon",
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Be the first to know when we launch.",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Submit",
+          "show_share_buttons": true,
+          "social_message": "Spread the word"
+        }
+      },
+      "1528814098932": {
+        "type": "featured-collections",
+        "blocks": {
+          "1528814098932-1": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-oil"
+            }
+          },
+          "1528814098932-0": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-balm"
+            }
+          },
+          "1560537515293": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-butter"
+            }
+          },
+          "1528814098932-2": {
+            "type": "collection",
+            "disabled": true,
+            "settings": {
+              "collection": "bundles"
+            }
+          },
+          "1550071562111": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-grooming"
+            }
+          },
+          "1550071597526": {
+            "type": "collection",
+            "settings": {
+              "collection": "shampoo-and-conditioner"
+            }
+          }
+        },
+        "block_order": [
+          "1528814098932-1",
+          "1528814098932-0",
+          "1560537515293",
+          "1528814098932-2",
+          "1550071562111",
+          "1550071597526"
+        ],
+        "settings": {
+          "title": "The Full Lineup"
+        }
+      },
+      "1528814116633": {
+        "type": "featured-products",
+        "settings": {
+          "title": "The Full Line",
+          "home_featured_products": "beard-oil",
+          "collection_products_grid": "grid"
+        }
+      },
+      "1528814140978": {
+        "type": "featured-row",
+        "settings": {
+          "image": "shopify://shop_images/MG_9400.jpg",
+          "layout": "left",
+          "title": "Two ounces. Same price.",
+          "text": "<p>Most beard oils come in 1oz bottles. Ours come in 2oz — packed with premium carrier oils and zero filler. We would rather give you more product at the same price than charge you twice for half as much. That is not a promotion. That is just how we build things.</p>",
+          "button_label": "Shop Beard Oils",
+          "button_link": "shopify://collections/beard-oil"
+        }
+      },
+      "1528814153986": {
+        "type": "featured-content",
+        "settings": {
+          "home_page_full_width": true,
+          "section_title": "We got tired of bad beard oil.",
+          "text": "<p>The industry standard is a 1oz bottle of watered-down oil with a label that costs more than what's inside. We built Royal Beardsmen because we could not find a product we actually wanted to use every day. Every formula is handcrafted in Spring Hill, Florida, in small batches, with ingredients we stand behind completely. If it's not good enough to put on our own face — it does not ship.</p>",
+          "text_size": "large"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "blocks": {
+          "1528823823804": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-oil"
+            }
+          },
+          "1528823791612": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-balm"
+            }
+          },
+          "35b0cd43-8d35-41e1-a77f-e4af91892419": {
+            "type": "collection",
+            "settings": {
+              "collection": "beard-butter"
+            }
+          }
+        },
+        "block_order": [
+          "1528823823804",
+          "1528823791612",
+          "35b0cd43-8d35-41e1-a77f-e4af91892419"
+        ],
+        "settings": {
+          "display_type": "selected",
+          "sort": "alphabetical"
+        }
+      },
+      "featured-row": {
+        "type": "featured-row",
+        "settings": {
+          "image": "",
+          "layout": "left",
+          "title": "",
+          "text": "",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "related-products": {
+        "type": "related-products",
+        "settings": {
+          "show_related_products": true,
+          "related_title": "Similar Products",
+          "related_grid_num": "3",
+          "related_grid_row": "1"
+        }
+      },
+      "1530578972178": {
+        "type": "featured-row",
+        "settings": {
+          "image": "shopify://shop_images/OBOMT60.jpg",
+          "layout": "right",
+          "title": "Your beard says something about you.",
+          "text": "<p>Not everyone grows a beard. Even fewer grow one on purpose. A well-kept beard is a form of self-respect — it takes intention, the right products, and about three minutes a day. Royal Beardsmen exists for the man who gets that.</p>",
+          "button_label": "Our Story",
+          "button_link": "shopify://pages/about-us"
+        }
+      },
+      "1531968408862": {
+        "type": "featured-product",
+        "settings": {
+          "featured_product": "no-shave-life-t-shirt",
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "show_share_buttons": true
+        }
+      },
+      "1534902520451": {
+        "type": "advanced-content",
+        "blocks": {
+          "html_rgFrEF": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align:center;\">\n<h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers.</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "1534902520451-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Money-Back-Gurantee_1080x.png?v=1534895522%0A\" width=\"280px/\">\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "html_rgFrEF",
+          "1534902520451-0"
+        ],
+        "disabled": true,
+        "settings": {}
+      },
+      "1535591174721": {
+        "type": "featured-blog",
+        "settings": {
+          "title": "Royal Beardsmen Blog",
+          "blog": "the-royal-beardsmen-blog",
+          "post_limit": 1,
+          "blog_show_date": true,
+          "blog_show_author": true,
+          "blog_show_image": true,
+          "blog_show_excerpt": true,
+          "show_view_all": false
+        }
+      },
+      "article-template": {
+        "type": "article-template",
+        "settings": {
+          "social_sharing_blog": true,
+          "show_author": true
+        }
+      },
+      "1550071410545": {
+        "type": "advanced-content",
+        "blocks": {
+          "1550071410545-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div id=\"insta-feed\"></div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "1550071410545-0"
+        ],
+        "settings": {}
+      },
+      "1560536999699": {
+        "type": "advanced-content",
+        "blocks": {
+          "1560536999699-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/3A36BA85-3AAB-4515-B564-8BD36A2CBBEA.png?802\" width=\"450px/\">\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "1560536999699-0"
+        ],
+        "settings": {}
+      },
+      "1572907306577": {
+        "type": "advanced-content",
+        "blocks": {
+          "html_GWXcdH": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Untitled_design_2.png?v=1763995595\">\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "1572907496579": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Untitled_5.jpg?v=1700435895\">\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "html_yqjeaj": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/Legends\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/eb7b860c-cd87-42fa-98d9-62ba366fc8ad.png?v=1751649635\"></a>\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "cfe2420d-23bd-4944-80db-b570d222a873": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/leisure\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled_1.png?v=1671376658\"></a>\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          },
+          "html_BgUQ9F": {
+            "type": "html",
+            "disabled": true,
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/grief\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled.webp?v=1729278135\"></a>\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "html_GWXcdH",
+          "1572907496579",
+          "html_yqjeaj",
+          "cfe2420d-23bd-4944-80db-b570d222a873",
+          "html_BgUQ9F"
+        ],
+        "disabled": true,
+        "settings": {}
+      },
+      "1573519702600": {
+        "type": "featured-content",
+        "disabled": true,
+        "custom_css": [
+          "h2 {color: red !important;}"
+        ],
+        "settings": {
+          "home_page_full_width": true,
+          "section_title": "FREE BEARD OIL IN CART",
+          "text": "<p>Just add items to your cart to reach the Free Beard Oil Goal</p>",
+          "text_size": "large"
+        }
+      },
+      "1574745491524": {
+        "type": "judgeme_carousel_section",
+        "settings": {
+          "maxwidth": 1080
+        }
+      },
+      "1574807615550": {
+        "type": "advanced-content",
+        "blocks": {
+          "1574807615550-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div class=\"fb-like\" data-href=\"https://www.facebook.com/royalbeardsmen/\" data-width=\"\" data-layout=\"standard\" data-action=\"like\" data-size=\"large\" data-show-faces=\"true\" data-share=\"true\"></div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "1574807615550-0"
+        ],
+        "settings": {}
+      },
+      "1593730374213": {
+        "type": "advanced-content",
+        "blocks": {
+          "1593730374213-0": {
+            "type": "html",
+            "settings": {
+              "code": "<div style=\"text-align: center;\">\n  <a href=\"https://www.royalbeardsmen.com/collections/bundles\"><img src=\"https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled.jpg?v=1593729751\"></a>\n</div>",
+              "width": "100%",
+              "alignment": "top-middle"
+            }
+          }
+        },
+        "block_order": [
+          "1593730374213-0"
+        ],
+        "disabled": true,
+        "settings": {}
+      },
+      "1640132073e6539d7f": {
+        "type": "map",
+        "disabled": true,
+        "settings": {
+          "heading": "Royal Beardsmen Beard SHop",
+          "address": "<p>1401 Kass Circle Spring Hill, FL 34606</p><p>Tue - Sat, 10am - 6pm<br/>Sun & Mon, Closed</p>",
+          "map_address": "1401 Kass Cir, Spring Hill, FL 34606",
+          "button_text": "Get directions",
+          "show_pin": true,
+          "api_key": "AIzaSyBR0OKJQNTB0KU5ZhciFkGrWeYo3ssrrQE",
+          "background_image": "shopify://shop_images/IMG_5667.jpg",
+          "background_image_position": "center center"
+        }
+      },
+      "sezzle-widget": {
+        "type": "sezzle-widget",
+        "settings": {
+          "show-sezzle-widget": false,
+          "color": "inherit",
+          "font-size": 14,
+          "font-family": "inherit",
+          "product-page-alignment": "auto",
+          "cart-page-alignment": "auto"
+        }
+      },
+      "97d4fcf3-4301-4ea1-91f2-c651f2ca3959": {
+        "type": "featured-products",
+        "settings": {
+          "title": "**NEW PRODUCT ALERT**",
+          "home_featured_products": "leisure",
+          "collection_products_grid": "collage"
+        }
+      },
+      "featured_content_GKWJiV": {
+        "type": "featured-content",
+        "disabled": true,
+        "settings": {
+          "home_page_full_width": false,
+          "section_title": "TAKE 15% ALL WEEK LONG",
+          "text": "<p>Use code <strong>BFCM25 </strong>to earn huge savings plus take advantage of all the freebies below! <strong>Just start adding to cart to unlock rewards</strong></p>",
+          "text_size": "large"
+        }
+      },
+      "rb_differentiators": {
+        "type": "rb-differentiators",
+        "blocks": {
+          "rb-diff-1": {
+            "type": "pillar",
+            "settings": {
+              "heading": "Made in the USA",
+              "subtext": "Blended in Spring Hill, Florida. Not a warehouse. Not overseas. By people who actually use it."
+            }
+          },
+          "rb-diff-2": {
+            "type": "pillar",
+            "settings": {
+              "heading": "All Natural",
+              "subtext": "Pure carrier oils. Organic botanicals. No synthetics, no fillers, nothing you cannot pronounce."
+            }
+          },
+          "rb-diff-3": {
+            "type": "pillar",
+            "settings": {
+              "heading": "Twice the Size",
+              "subtext": "Our oils come in 2oz bottles. The industry standard is 1oz. Do the math — you are already ahead."
+            }
+          },
+          "rb-diff-4": {
+            "type": "pillar",
+            "settings": {
+              "heading": "100% Backed",
+              "subtext": "Not satisfied? We fix it. No forms, no runaround — a straight answer and a real solution."
+            }
+          }
+        },
+        "block_order": [
+          "rb-diff-1",
+          "rb-diff-2",
+          "rb-diff-3",
+          "rb-diff-4"
+        ],
+        "settings": {}
+      },
+      "rb_scent_feature": {
+        "type": "rb-scent-feature",
+        "settings": {
+          "eyebrow": "The Signature",
+          "heading": "Close your eyes.",
+          "scent_name": "Great Wilderness",
+          "description": "Cedar. Pine. The kind of morning air that exists before the rest of the world wakes up. This is the scent that built Royal Beardsmen — and the one men keep coming back for.",
+          "cta_label": "Shop Great Wilderness",
+          "cta_link": "shopify://collections/beard-oil"
+        }
+      },
+      "rb_stats_bar": {
+        "type": "rb-stats-bar",
+        "blocks": {
+          "rb-stat-1": {
+            "type": "stat",
+            "settings": {
+              "stat": "★★★★★  4.9 / 5 Average Rating"
+            }
+          },
+          "rb-stat-2": {
+            "type": "stat",
+            "settings": {
+              "stat": "2,500+ Verified Reviews"
+            }
+          },
+          "rb-stat-3": {
+            "type": "stat",
+            "settings": {
+              "stat": "100% USA Handcrafted"
+            }
+          },
+          "rb-stat-4": {
+            "type": "stat",
+            "settings": {
+              "stat": "Free Shipping Over $50"
+            }
+          }
+        },
+        "block_order": [
+          "rb-stat-1",
+          "rb-stat-2",
+          "rb-stat-3",
+          "rb-stat-4"
+        ],
+        "settings": {}
+      },
+      "rb_scent_grid": {
+        "type": "rb-scent-grid",
+        "blocks": {
+          "rb-scent-gw": {
+            "type": "scent",
+            "settings": {
+              "color_scheme": "forest",
+              "raw_image_url": "",
+              "image": "",
+              "product_type": "Beard Oil",
+              "title": "Great Wilderness",
+              "tagline": "The one that started it all.",
+              "notes": "Cedar · Pine · Cold Morning Air",
+              "cta_label": "Shop Now",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rb-scent-leg": {
+            "type": "scent",
+            "settings": {
+              "color_scheme": "amber",
+              "image": "",
+              "raw_image_url": "https://cdn.shopify.com/s/files/1/0006/4336/6977/files/eb7b860c-cd87-42fa-98d9-62ba366fc8ad.png",
+              "product_type": "Beard Oil",
+              "title": "Legends",
+              "tagline": "Made for the man who earns his place.",
+              "notes": "Rich · Deep · Complex",
+              "cta_label": "Shop Now",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rb-scent-lei": {
+            "type": "scent",
+            "settings": {
+              "color_scheme": "slate",
+              "image": "",
+              "raw_image_url": "https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled_1.png",
+              "product_type": "Beard Oil",
+              "title": "Leisure",
+              "tagline": "The everyday carry. Easy on, confident all day.",
+              "notes": "Clean · Relaxed · Warm",
+              "cta_label": "Shop Now",
+              "link": "shopify://collections/leisure"
+            }
+          },
+          "rb-scent-grief": {
+            "type": "scent",
+            "settings": {
+              "color_scheme": "smoke",
+              "image": "",
+              "raw_image_url": "https://cdn.shopify.com/s/files/1/0006/4336/6977/files/Copy_of_Copy_of_Copy_of_Untitled.webp",
+              "product_type": "Beard Oil",
+              "title": "Grief",
+              "tagline": "Dark, heavy, unforgettable.",
+              "notes": "Bold · Dark · Commanding",
+              "cta_label": "Shop Now",
+              "link": "shopify://collections/grief"
+            }
+          }
+        },
+        "block_order": [
+          "rb-scent-gw",
+          "rb-scent-leg",
+          "rb-scent-lei",
+          "rb-scent-grief"
+        ],
+        "settings": {
+          "eyebrow": "The Line",
+          "title": "Find Your Scent",
+          "subtitle": "Every name means something. Find the world that fits yours."
+        }
+      },
+      "rb_process": {
+        "type": "rb-process",
+        "blocks": {
+          "rb-step-1": {
+            "type": "step",
+            "settings": {
+              "title": "Sourced",
+              "description": "We select premium carrier oils and organic botanicals for their performance on beard hair and skin — not because they're cheap."
+            }
+          },
+          "rb-step-2": {
+            "type": "step",
+            "settings": {
+              "title": "Blended",
+              "description": "Every formula is blended in small batches in Spring Hill, Florida. One batch at a time. Every time."
+            }
+          },
+          "rb-step-3": {
+            "type": "step",
+            "settings": {
+              "title": "Delivered",
+              "description": "Filled, sealed, and inspected by hand. In a 2oz bottle — because cutting you short was never an option."
+            }
+          }
+        },
+        "block_order": [
+          "rb-step-1",
+          "rb-step-2",
+          "rb-step-3"
+        ],
+        "settings": {
+          "eyebrow": "How It's Made",
+          "title": "Small Batches. Real Care."
+        }
+      },
+      "rb_manifesto": {
+        "type": "rb-manifesto",
+        "settings": {
+          "kicker": "The Standard",
+          "quote": "The difference between a good beard and a great one is about three minutes a day.",
+          "subtext": "We make those three minutes worth it. Royal Beardsmen — Spring Hill, FL."
+        }
+      },
+      "rb_identity": {
+        "type": "rb-identity",
+        "blocks": {
+          "rb-id-1": {
+            "type": "line",
+            "settings": {
+              "line": "Grew a beard on purpose and takes care of it the same way"
+            }
+          },
+          "rb-id-2": {
+            "type": "line",
+            "settings": {
+              "line": "Wants a scent that actually means something, not just smells like soap"
+            }
+          },
+          "rb-id-3": {
+            "type": "line",
+            "settings": {
+              "line": "Knows the difference between cheap grooming products and the real thing"
+            }
+          },
+          "rb-id-4": {
+            "type": "line",
+            "settings": {
+              "line": "Holds himself to a standard in the gym, at work, in the mirror"
+            }
+          },
+          "rb-id-5": {
+            "type": "line",
+            "settings": {
+              "line": "Finishes what he starts"
+            }
+          },
+          "rb-id-6": {
+            "type": "line",
+            "settings": {
+              "line": "Understands that a well-kept beard is a statement, not vanity"
+            }
+          }
+        },
+        "block_order": [
+          "rb-id-1",
+          "rb-id-2",
+          "rb-id-3",
+          "rb-id-4",
+          "rb-id-5",
+          "rb-id-6"
+        ],
+        "settings": {
+          "eyebrow": "Who This Is For",
+          "heading": "This is for the man who.",
+          "cta_label": "Shop the Collection",
+          "cta_link": "shopify://collections/beard-oil"
+        }
+      },
+      "rb_hero": {
+        "type": "rb-hero",
+        "settings": {
+          "eyebrow": "Royal Beardsmen",
+          "heading": "The Beard Deserves Better.",
+          "subheading": "Premium beard care. Handcrafted in small batches in Spring Hill, Florida.",
+          "cta_label": "Shop Beard Oils",
+          "cta_link": "shopify://collections/beard-oil",
+          "cta2_label": "Find Your Scent",
+          "cta2_link": "shopify://collections/all"
+        }
+      },
+      "rb_scent_nav": {
+        "type": "rb-scent-nav",
+        "blocks": {
+          "rbn-1": {
+            "type": "scent",
+            "settings": {
+              "name": "El Humidor",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-2": {
+            "type": "scent",
+            "settings": {
+              "name": "Bonfire Brandy",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-3": {
+            "type": "scent",
+            "settings": {
+              "name": "Dragon Spice",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-4": {
+            "type": "scent",
+            "settings": {
+              "name": "Pinewood Forest",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-5": {
+            "type": "scent",
+            "settings": {
+              "name": "King's Lagoon",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-6": {
+            "type": "scent",
+            "settings": {
+              "name": "Cavalier",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-7": {
+            "type": "scent",
+            "settings": {
+              "name": "Leisure",
+              "link": "shopify://collections/leisure"
+            }
+          },
+          "rbn-8": {
+            "type": "scent",
+            "settings": {
+              "name": "Whiskey Glaze",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-9": {
+            "type": "scent",
+            "settings": {
+              "name": "Vanguard",
+              "link": "shopify://collections/beard-oil"
+            }
+          },
+          "rbn-10": {
+            "type": "scent",
+            "settings": {
+              "name": "Reign",
+              "link": "shopify://collections/beard-oil"
+            }
+          }
+        },
+        "block_order": [
+          "rbn-1",
+          "rbn-2",
+          "rbn-3",
+          "rbn-4",
+          "rbn-5",
+          "rbn-6",
+          "rbn-7",
+          "rbn-8",
+          "rbn-9",
+          "rbn-10"
+        ],
+        "settings": {}
+      },
+      "rb_scent_world": {
+        "type": "rb-scent-world",
+        "settings": {
+          "panel1_eyebrow": "Beard Oil",
+          "panel1_name": "El Humidor",
+          "panel1_notes": "Honey · Vanilla · Black Pepper",
+          "panel1_description": "The cigar lounge in a bottle. Rich, warm, and uncompromising.",
+          "panel1_cta_label": "Shop El Humidor",
+          "panel1_cta_link": "shopify://collections/beard-oil",
+          "panel2_eyebrow": "Beard Oil",
+          "panel2_name": "Bonfire Brandy",
+          "panel2_notes": "Smoked Wood · Rich Brandy · Warm Vanilla",
+          "panel2_description": "Campfire smoke, aged brandy, and something you can't quite name. This one stays with you.",
+          "panel2_cta_label": "Shop Bonfire Brandy",
+          "panel2_cta_link": "shopify://collections/beard-oil"
+        }
+      },
+      "rb_statement": {
+        "type": "rb-statement",
+        "settings": {
+          "kicker": "The Standard",
+          "statement": "Three minutes a day.",
+          "context": "That's the difference between a beard you just have and one that actually says something about you."
+        }
+      },
+      "rb_brand_story": {
+        "type": "rb-brand-story",
+        "settings": {
+          "layout": "left",
+          "eyebrow": "Our Story",
+          "heading": "We got tired of bad beard oil.",
+          "body": "<p>The industry standard is a 1oz bottle of watered-down oil with a label that costs more than what’s inside. We built Royal Beardsmen because we couldn’t find a product we actually wanted to use every day.</p><p>Every formula is handcrafted in Spring Hill, Florida. Small batches. Real ingredients. If it’s not good enough to put on our own face — it doesn’t ship.</p>",
+          "cta_label": "Our Story",
+          "cta_link": "shopify://pages/about-us"
+        }
+      },
+      "rb_two_oz": {
+        "type": "rb-two-oz",
+        "settings": {
+          "eyebrow": "The Difference",
+          "headline": "Twice the oil. Same price.",
+          "body": "The industry standard is a 1oz bottle. Ours hold 2oz — same price, twice the product. We chose better ingredients over bigger margins. That’s not a deal. That’s just how we build things.",
+          "cta_label": "Shop Beard Oils",
+          "cta_link": "shopify://collections/beard-oil"
+        }
+      }
+    },
+    "content_for_index": [
+      "rb_hero",
+      "rb_scent_nav",
+      "1528814116633",
+      "rb_scent_world",
+      "rb_statement",
+      "1574745491524",
+      "rb_brand_story",
+      "rb_two_oz",
+      "rb_identity",
+      "newsletter"
+    ],
+    "blocks": {
+      "11349500561483629931": {
+        "type": "shopify://apps/ReStock/blocks/app-embed/b399b727-6c85-44fc-9e21-63114bd72054",
+        "disabled": false,
+        "settings": {}
+      },
+      "6810535121229352664": {
+        "type": "shopify://apps/monster-cart-upsell-free-gifts/blocks/app-embed/a1b8e58a-bf1d-4e0f-8768-a387c3f643c0",
+        "disabled": false,
+        "settings": {
+          "markets_rounding": false,
+          "send_gtag_atc": false,
+          "disable_tiktok_tracking": false,
+          "disable_klaviyo_tracking": false,
+          "stop_cart_page": false,
+          "apply_discount_before_checkout": false,
+          "bag_selector": "",
+          "hide_when_opened": "",
+          "show_item_properties": false,
+          "stop_shopify_rate": false,
+          "dev_mode": false,
+          "beta_version": false,
+          "custom_code": "<script>\n    // custom code here\n</script>"
+        }
+      },
+      "3297818543141111005": {
+        "type": "shopify://apps/ultimate-product-icons/blocks/app-embed-block/42c1dd38-3f32-4069-9b37-3ccc8e6db688",
+        "disabled": true,
+        "settings": {}
+      },
+      "14060646107696862457": {
+        "type": "shopify://apps/judge-me-reviews/blocks/judgeme_core/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {}
+      },
+      "9094328589753815681": {
+        "type": "shopify://apps/hextom-shipping-bar/blocks/fsb-embeded-block/7ef5d9af-75a2-45c7-9b1b-f9240ee488e9",
+        "disabled": false,
+        "settings": {}
+      },
+      "1513253815146976218": {
+        "type": "shopify://apps/omnisend-email-marketing-sms/blocks/app-embed/44704aa2-794f-4c5d-8c8e-039c841158e9",
+        "disabled": false,
+        "settings": {}
+      },
+      "341186785192672687": {
+        "type": "shopify://apps/seal-subscriptions/blocks/subscription-script-append/13b25004-a140-4ab7-b5fe-29918f759699",
+        "disabled": false,
+        "settings": {}
+      },
+      "6012664788653924950": {
+        "type": "shopify://apps/mps-buy-me/blocks/app-embed/da5cef02-d610-4c52-adf7-383273d1f67b",
+        "disabled": false,
+        "settings": {}
+      },
+      "10431957531522714341": {
+        "type": "shopify://apps/seowill-image/blocks/pagespeed-preloading/b6edaf80-ee08-4404-951c-d8f577b5c1b1",
+        "disabled": false,
+        "settings": {}
+      },
+      "6174324309569838175": {
+        "type": "shopify://apps/smile-io/blocks/smile-shopify-app/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+        "disabled": false,
+        "settings": {}
+      }
+    }
+  },
+  "presets": {
+    "Classic": {
+      "cart_type": "drawer",
+      "cart_notes_enable": false,
+      "checkout_accent_color": "#a26b25",
+      "checkout_banner_background_color": "#fff",
+      "checkout_button_color": "#000000",
+      "checkout_call_to_action_color": "#a26b25",
+      "checkout_use_header_image": false,
+      "collection_products_grid": "collage",
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#222323",
+      "color_borders": "#1c1d1d",
+      "color_button_text": "#ffffff",
+      "color_drawer_background": "#1c1d1d",
+      "color_drawer_border": "#343535",
+      "color_drawer_button": "#a26b25",
+      "color_drawer_button_text": "#ffffff",
+      "color_drawer_text": "#ffffff",
+      "color_headings": "#222323",
+      "color_input": "#f6f6f6",
+      "color_newsletter": "#f6f6f6",
+      "color_primary": "#1c1d1d",
+      "color_product_background": "#f7f7f7",
+      "color_sale_tag": "#990000",
+      "color_secondary": "#a26b25",
+      "customer_layout": "customer_area",
+      "favicon_enable": false,
+      "product_vendor_enable": false,
+      "share_facebook": true,
+      "share_pinterest": true,
+      "share_twitter": true,
+      "social_sharing_style": "clean",
+      "type_accent_family": "Google_Montserrat_400_sans",
+      "type_accent_spacing": true,
+      "type_accent_transform": true,
+      "type_accent_subheadings": true,
+      "type_base_family": "Google_Arapey_400_serif",
+      "type_base_italize_titles": true,
+      "type_base_size": "16px",
+      "type_header_base_size": "30px",
+      "type_header_border_thickness": "1px",
+      "type_header_family": "Google_Old+Standard+TT_400_serif",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "show_announcement": true,
+            "color_bg": "#1c1d1d",
+            "color_text": "#ffffff"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "slide",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "slide",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "home_featured_products": "frontpage"
+          }
+        },
+        "featured-content": {
+          "type": "featured-content",
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "featured-collections",
+          "blocks": {
+            "featured-collections-0": {
+              "type": "collection",
+              "settings": {}
+            },
+            "featured-collections-1": {
+              "type": "collection",
+              "settings": {}
+            },
+            "featured-collections-2": {
+              "type": "collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "featured-collections-0",
+            "featured-collections-1",
+            "featured-collections-2"
+          ],
+          "settings": {}
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "featured-content",
+        "featured-collections",
+        "featured-products",
+        "newsletter"
+      ]
+    },
+    "Playful": {
+      "color_body_bg": "#ffffff",
+      "color_body_text": "#565656",
+      "color_borders": "#5dd2b4",
+      "color_button_text": "#003b34",
+      "color_primary": "#5dd2b4",
+      "color_secondary": "#058677",
+      "color_product_background": "#fff4f6",
+      "color_sale_tag": "#e80970",
+      "color_input": "#f6f6f6",
+      "color_newsletter": "#bde9f2",
+      "color_drawer_background": "#360f5f",
+      "color_drawer_text": "#ffffff",
+      "color_drawer_border": "#50297a",
+      "color_drawer_button": "#5dd2b4",
+      "color_drawer_button_text": "#360f5f",
+      "color_headings": "#321863",
+      "type_header_family": "Google_Quicksand_700_sans",
+      "type_header_base_size": "38px",
+      "type_header_border_thickness": "1px",
+      "type_accent_family": "Google_Roboto_700_sans",
+      "type_accent_transform": true,
+      "type_accent_spacing": true,
+      "type_accent_subheadings": false,
+      "type_base_family": "'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+      "type_base_size": "17px",
+      "type_base_italize_titles": false,
+      "cart_type": "drawer",
+      "cart_notes_enable": true,
+      "social_facebook_link": "",
+      "social_twitter_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_snapchat_link": "",
+      "social_google_plus_link": "",
+      "social_tumblr_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "social_fancy_link": "",
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#fff4f6",
+      "checkout_heading_font": "Helvetica Neue",
+      "checkout_body_font": "Roboto",
+      "checkout_accent_color": "#0d8d7e",
+      "checkout_button_color": "#5dd2b4",
+      "checkout_error_color": "#f01130",
+      "checkout_banner_background_color": "#fff",
+      "checkout_call_to_action_color": "#a26b25",
+      "checkout_use_header_image": false,
+      "collection_products_grid": "collage",
+      "customer_layout": "customer_area",
+      "favicon_enable": false,
+      "product_vendor_enable": false,
+      "social_sharing_style": "clean",
+      "sections": {
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "1495823280244": {
+              "type": "slide",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1495823280244"
+          ],
+          "settings": {
+            "hero_home_auto": false,
+            "home_hero_auto_speed": "5000"
+          }
+        },
+        "featured-products": {
+          "type": "featured-products",
+          "settings": {
+            "home_featured_products": "frontpage",
+            "collection_products_grid": "collage"
+          }
+        },
+        "newsletter": {
+          "type": "newsletter",
+          "settings": {}
+        },
+        "drawer-menu": {
+          "type": "drawer-menu",
+          "settings": {
+            "drawer_top_link_list": "main-menu",
+            "drawer_bottom_link_list": "footer",
+            "drawer_search_enable": false
+          }
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "main_menu_link_list": "main-menu",
+            "logo_max_width": "260",
+            "search": "modal",
+            "show_announcement": false,
+            "color_bg": "#290c49",
+            "color_text": "#ffffff"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "footer_link_list": "footer"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "collection_products_grid": "grid",
+            "collection_tags_enable": false,
+            "product_vendor_enable": false
+          }
+        },
+        "1494860348200": {
+          "type": "featured-row",
+          "settings": {
+            "layout": "right"
+          }
+        },
+        "1494894035034": {
+          "type": "featured-row",
+          "settings": {
+            "layout": "left"
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "zoom_enable": false,
+            "social_sharing_products": true,
+            "product_vendor_enable": false
+          }
+        },
+        "1496078102297": {
+          "type": "advanced-content",
+          "blocks": {
+            "1496078102297-0": {
+              "type": "html",
+              "settings": {
+                "code": "<div style=\"text-align:center;\">\n<h1 class=\"h1\">Use HTML to format your text so it can be easily read.</h1>This text can be used to share information about your brand with customers.</div>",
+                "width": "100%",
+                "alignment": "top-middle"
+              }
+            }
+          },
+          "block_order": [
+            "1496078102297-0"
+          ],
+          "settings": {}
+        },
+        "1496177901425": {
+          "type": "advanced-content",
+          "blocks": {
+            "1496177901425-0": {
+              "type": "html",
+              "settings": {
+                "code": "<div style=\"width:745px;text-align: center; margin: 0 auto;\">This text can be used to share information about your brand with customers.</div>",
+                "width": "100%",
+                "alignment": "top-middle"
+              }
+            }
+          },
+          "block_order": [
+            "1496177901425-0"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "1496177901425",
+        "featured-products",
+        "newsletter",
+        "1496078102297",
+        "1494860348200",
+        "1494894035034"
+      ]
+    }
+  }
+}
