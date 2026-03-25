@@ -1,0 +1,47 @@
+<div class="rb-manifesto" data-section-id="{{ section.id }}" data-section-type="rb-manifesto">
+  <div class="rb-manifesto-inner">
+    <div class="rb-manifesto-rule"></div>
+    {% if section.settings.kicker != blank %}
+      <span class="rb-manifesto-kicker">{{ section.settings.kicker | upcase | escape }}</span>
+    {% endif %}
+    {% if section.settings.quote != blank %}
+      <p class="rb-manifesto-quote">{{ section.settings.quote | escape }}</p>
+    {% endif %}
+    {% if section.settings.subtext != blank %}
+      <p class="rb-manifesto-sub">{{ section.settings.subtext | escape }}</p>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Manifesto",
+  "class": "index-section rb-manifesto-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Eyebrow text",
+      "default": "Royal Beardsmen"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Statement",
+      "default": "Most men settle for whatever's on the shelf. We make the stuff for the ones who don't."
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Handcrafted in Spring Hill, Florida."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Manifesto",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
