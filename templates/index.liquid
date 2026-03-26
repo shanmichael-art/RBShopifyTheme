@@ -1,6 +1,15 @@
-<!-- /templates/index.liquid -->
-<!-- Royal Beardsmen — Redesigned Homepage -->
+{% comment %}
+  Royal Beardsmen — Homepage
+  Sections are rendered directly here (not via content_for_index)
+  so they appear as soon as the theme is pushed to Shopify.
+  Each section is fully customizable in the Theme Editor.
+{% endcomment %}
 
-<div class="index-sections rb-homepage">
-  {{ content_for_index }}
+<div class="rb-homepage">
+  {% section 'rb-hero' %}
+  {% section 'rb-trust-bar' %}
+  {% section 'rb-products-showcase' %}
+  {% section 'rb-brand-story' %}
+  {% section 'rb-bundle-offer' %}
+  {% section 'rb-testimonials' %}
 </div>

@@ -152,7 +152,7 @@
       {% endunless %}
     </main>
 
-    <hr class="hr--large">
+    {% unless template.name == "index" %}<hr class="hr--large">{% endunless %}
 
     {% section 'footer' %}
 
