@@ -38,18 +38,82 @@
             }
           </style>
 
-          {% if section.settings.link == blank %}
-            <div class="announcement-bar">
-          {% else %}
-            <a href="{{ section.settings.link }}" class="announcement-bar announcement-bar--link">
+          {% comment %} Rotating announcement bar {% endcomment %}
+          {% assign ann_messages = '' | split: ',' %}
+          {% if section.settings.text != blank %}
+            {% assign ann_messages = ann_messages | push: section.settings.text %}
+          {% endif %}
+          {% if section.settings.text_2 != blank %}
+            {% assign ann_messages = ann_messages | push: section.settings.text_2 %}
+          {% endif %}
+          {% if section.settings.text_3 != blank %}
+            {% assign ann_messages = ann_messages | push: section.settings.text_3 %}
           {% endif %}
 
-            <p class="announcement-bar__message">{{ section.settings.text | escape }}</p>
+          {% if section.settings.link == blank %}
+            <div class="announcement-bar rb-ann-bar">
+          {% else %}
+            <a href="{{ section.settings.link }}" class="announcement-bar announcement-bar--link rb-ann-bar">
+          {% endif %}
+
+            <div class="rb-ann-track" id="rb-ann-track-{{ section.id }}">
+              {% for msg in ann_messages %}
+                <p class="announcement-bar__message rb-ann-msg{% if forloop.first %} rb-ann-msg--active{% endif %}"
+                   aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}">
+                  {{ msg | escape }}
+                </p>
+              {% endfor %}
+            </div>
 
           {% if section.settings.link == blank %}
             </div>
           {% else %}
             </a>
+          {% endif %}
+
+          <style>
+            .rb-ann-bar { position: relative; overflow: hidden; }
+            .rb-ann-track { display: flex; flex-direction: column; align-items: center; }
+            .rb-ann-msg {
+              width: 100%;
+              text-align: center;
+              margin: 0;
+              opacity: 0;
+              transform: translateY(100%);
+              transition: opacity 0.5s ease, transform 0.5s ease;
+              position: absolute;
+            }
+            .rb-ann-msg--active {
+              opacity: 1;
+              transform: translateY(0);
+              position: relative;
+            }
+            .rb-ann-msg--exit {
+              opacity: 0;
+              transform: translateY(-100%);
+            }
+          </style>
+
+          {% if ann_messages.size > 1 %}
+            <script>
+              (function() {
+                var trackId = 'rb-ann-track-{{ section.id }}';
+                var msgs = document.querySelectorAll('#' + trackId + ' .rb-ann-msg');
+                if (!msgs.length) return;
+                var current = 0;
+                setInterval(function() {
+                  msgs[current].classList.remove('rb-ann-msg--active');
+                  msgs[current].classList.add('rb-ann-msg--exit');
+                  msgs[current].setAttribute('aria-hidden', 'true');
+                  setTimeout(function() {
+                    msgs[current].classList.remove('rb-ann-msg--exit');
+                    current = (current + 1) % msgs.length;
+                    msgs[current].classList.add('rb-ann-msg--active');
+                    msgs[current].setAttribute('aria-hidden', 'false');
+                  }, 500);
+                }, 4000);
+              })();
+            </script>
           {% endif %}
 
         {% endif %}
@@ -333,13 +397,24 @@
       {
         "type": "text",
         "id": "text",
-        "label": "Text",
-        "default": "Announce something here"
+        "label": "Message 1",
+        "default": "FREE USA SHIPPING ON ORDERS OVER $50 — HANDCRAFTED IN SMALL BATCHES"
+      },
+      {
+        "type": "text",
+        "id": "text_2",
+        "label": "Message 2 (optional)",
+        "info": "Rotates automatically every 4 seconds when set"
+      },
+      {
+        "type": "text",
+        "id": "text_3",
+        "label": "Message 3 (optional)"
       },
       {
         "type": "url",
         "id": "link",
-        "label": "Link"
+        "label": "Link (applies to all messages)"
       },
       {
         "type": "color",

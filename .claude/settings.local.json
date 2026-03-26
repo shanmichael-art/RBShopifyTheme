@@ -3,7 +3,11 @@
     "allow": [
       "Bash(claude mcp:*)",
       "Bash(python3:*)",
-      "Bash(node:*)"
+      "Bash(node:*)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"premium masculine beard grooming DTC ecommerce lifestyle brand\" --design-system -p \"Royal Beardsmen\" -f markdown)",
+      "Bash(py --version)",
+      "Bash(where python:*)",
+      "Bash(python -c \"import json; d=json.load\\(open\\(''C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/config/settings_data.json''\\)\\); print\\(d[''current''][''content_for_index'']\\)\")"
     ]
   }
 }

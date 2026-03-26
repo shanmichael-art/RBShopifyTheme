@@ -1,0 +1,435 @@
+{% comment %}
+  Royal Beardsmen — Full-Screen Hero
+  Replaces the legacy slideshow section.
+  Supports: background image, headline, sub-copy, primary + ghost CTA, inline social proof, scroll indicator.
+{% endcomment %}
+
+<style>
+  .rb-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+
+  .rb-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: {{ section.settings.bg_position | default: 'center center' }};
+    background-repeat: no-repeat;
+  }
+
+  .rb-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.55) 52%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+  }
+
+  @media screen and (max-width: 768px) {
+    .rb-hero-overlay {
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.60) 45%,
+        rgba(0, 0, 0, 0.22) 100%
+      );
+    }
+  }
+
+  .rb-hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 120px 40px 80px;
+  }
+
+  .rb-hero-inner {
+    max-width: 640px;
+  }
+
+  .rb-hero-eyebrow {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #c9a96e;
+    margin: 0 0 22px 0;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.30);
+  }
+
+  .rb-hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 78px);
+    font-weight: 700;
+    line-height: 1.06;
+    color: #ffffff;
+    margin: 0 0 22px 0;
+    letter-spacing: -0.01em;
+  }
+
+  .rb-hero-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 17px;
+    line-height: 1.68;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 38px 0;
+    max-width: 440px;
+  }
+
+  .rb-hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .rb-hero-btn {
+    display: inline-block;
+    padding: 15px 36px;
+    background: #c9a96e;
+    color: #111111 !important;
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .rb-hero-btn:hover {
+    background: #b8924f;
+  }
+
+  .rb-hero-btn-ghost {
+    display: inline-block;
+    padding: 14px 34px;
+    background: transparent;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    font-family: 'Oswald', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .rb-hero-btn-ghost:hover {
+    border-color: #c9a96e;
+    color: #c9a96e !important;
+  }
+
+  .rb-hero-proof {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+
+  .rb-hero-proof-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.52);
+    padding-right: 16px;
+    margin-right: 16px;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .rb-hero-proof-item:last-child {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+
+  .rb-hero-stars {
+    color: #c9a96e;
+    letter-spacing: 1px;
+    font-size: 13px;
+  }
+
+  .rb-hero-scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: rb-fade-in-scroll 1s ease 1.2s forwards;
+  }
+
+  .rb-hero-scroll-line {
+    width: 1px;
+    height: 44px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.45));
+    animation: rb-scroll-bob 1.9s ease-in-out infinite;
+  }
+
+  .rb-hero-scroll-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.38);
+    order: -1;
+  }
+
+  @keyframes rb-scroll-bob {
+    0%, 100% { transform: translateY(0); opacity: 0.5; }
+    50% { transform: translateY(5px); opacity: 1; }
+  }
+
+  @keyframes rb-fade-in-scroll {
+    to { opacity: 1; }
+  }
+
+  @media screen and (max-width: 768px) {
+    .rb-hero {
+      align-items: flex-end;
+    }
+    .rb-hero-content {
+      padding: 100px 24px 64px;
+    }
+    .rb-hero-inner {
+      max-width: 100%;
+    }
+    .rb-hero-headline {
+      font-size: clamp(34px, 9vw, 50px);
+    }
+    .rb-hero-sub {
+      font-size: 15px;
+      max-width: 100%;
+    }
+    .rb-hero-btn,
+    .rb-hero-btn-ghost {
+      padding: 13px 26px;
+      font-size: 11px;
+    }
+    .rb-hero-scroll-indicator {
+      display: none;
+    }
+  }
+</style>
+
+<div class="rb-hero index-section" data-section-id="{{ section.id }}" data-section-type="rb-hero">
+
+  {% comment %} Background {% endcomment %}
+  {% if section.settings.bg_image != blank %}
+    <div class="rb-hero-bg lazyload"
+      data-bgset="{{ section.settings.bg_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' }}"
+      data-sizes="auto"
+      data-parent-fit="cover"
+      style="background-image: url('{{ section.settings.bg_image | img_url: '600x' }}');
+             background-position: {{ section.settings.bg_position | default: 'center center' }};"></div>
+  {% else %}
+    <div class="rb-hero-bg" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1208 60%, #0f0b03 100%);"></div>
+  {% endif %}
+
+  {% comment %} Overlay {% endcomment %}
+  <div class="rb-hero-overlay"></div>
+
+  {% comment %} Content {% endcomment %}
+  <div class="rb-hero-content">
+    <div class="rb-hero-inner">
+
+      {% if section.settings.eyebrow != blank %}
+        <p class="rb-hero-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+
+      {% if section.settings.headline != blank %}
+        <h1 class="rb-hero-headline">{{ section.settings.headline | escape }}</h1>
+      {% endif %}
+
+      {% if section.settings.subtext != blank %}
+        <p class="rb-hero-sub">{{ section.settings.subtext | escape }}</p>
+      {% endif %}
+
+      <div class="rb-hero-cta-row">
+        {% if section.settings.btn_label != blank %}
+          <a href="{{ section.settings.btn_link }}" class="rb-hero-btn">
+            {{ section.settings.btn_label | escape }}
+          </a>
+        {% endif %}
+        {% if section.settings.ghost_btn_label != blank %}
+          <a href="{{ section.settings.ghost_btn_link }}" class="rb-hero-btn-ghost">
+            {{ section.settings.ghost_btn_label | escape }}
+          </a>
+        {% endif %}
+      </div>
+
+      {% if section.settings.show_proof %}
+        <div class="rb-hero-proof">
+          <div class="rb-hero-proof-item">
+            <span class="rb-hero-stars">★★★★★</span>
+            <span>{{ section.settings.proof_rating | default: '4.9' }}</span>
+          </div>
+          <div class="rb-hero-proof-item">{{ section.settings.proof_reviews | default: '2,500+ Reviews' }}</div>
+          <div class="rb-hero-proof-item">{{ section.settings.proof_badge | default: 'USA Handcrafted' }}</div>
+        </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+  {% if section.settings.show_scroll %}
+    <div class="rb-hero-scroll-indicator" aria-hidden="true">
+      <span class="rb-hero-scroll-label">Scroll</span>
+      <div class="rb-hero-scroll-line"></div>
+    </div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Full-Screen Hero",
+  "class": "rb-hero-section-outer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image",
+      "info": "Recommended: 2400px wide, dark/moody lifestyle photo"
+    },
+    {
+      "type": "select",
+      "id": "bg_position",
+      "label": "Image focal point",
+      "options": [
+        { "value": "center center", "label": "Center" },
+        { "value": "center top", "label": "Top" },
+        { "value": "center bottom", "label": "Bottom" },
+        { "value": "left center", "label": "Left" },
+        { "value": "right center", "label": "Right" }
+      ],
+      "default": "center center"
+    },
+    {
+      "type": "header",
+      "content": "Copy"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow label",
+      "default": "Royal Beardsmen"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "The Beard Deserves Better."
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Handcrafted beard oil for the man who doesn't settle."
+    },
+    {
+      "type": "header",
+      "content": "Primary Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Label",
+      "default": "Shop the Line"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Secondary Button (optional)"
+    },
+    {
+      "type": "text",
+      "id": "ghost_btn_label",
+      "label": "Label",
+      "default": "Find Your Scent"
+    },
+    {
+      "type": "url",
+      "id": "ghost_btn_link",
+      "label": "Link"
+    },
+    {
+      "type": "header",
+      "content": "Social Proof"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_proof",
+      "label": "Show social proof line",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "proof_rating",
+      "label": "Rating text",
+      "default": "4.9"
+    },
+    {
+      "type": "text",
+      "id": "proof_reviews",
+      "label": "Reviews label",
+      "default": "2,500+ Reviews"
+    },
+    {
+      "type": "text",
+      "id": "proof_badge",
+      "label": "Badge text",
+      "default": "USA Handcrafted"
+    },
+    {
+      "type": "header",
+      "content": "Extras"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_scroll",
+      "label": "Show scroll indicator (desktop only)",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full-Screen Hero",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
