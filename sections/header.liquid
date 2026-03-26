@@ -8,71 +8,6 @@
       max-width: 100%;
     }
   }
-
-  /* ── Transparent overlay header on homepage ── */
-  .template-index .header-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-  }
-
-  .template-index .header-wrapper {
-    background: transparent !important;
-  }
-
-  .template-index .announcement-bar {
-    background: rgba(0,0,0,0.55) !important;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
-
-  .template-index .site-header {
-    background: transparent !important;
-  }
-
-  .template-index .site-nav__link,
-  .template-index .site-header__logo a {
-    color: rgba(255,255,255,0.88) !important;
-  }
-
-  .template-index .site-nav__link:hover,
-  .template-index .site-header__logo a:hover {
-    color: #c9a96e !important;
-  }
-
-  .template-index .burger-icon {
-    background: #ffffff !important;
-  }
-
-  .template-index .cart-link__bubble {
-    border-color: #0a0a0a !important;
-  }
-
-  /* ── Rotating announcement bar ── */
-  .rb-ann-bar { position: relative; overflow: hidden; min-height: 42px; }
-  .rb-ann-msg {
-    position: absolute;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 10px 0;
-    opacity: 0;
-    transform: translateY(14px);
-    transition: opacity 0.45s ease, transform 0.45s ease;
-    pointer-events: none;
-  }
-  .rb-ann-msg--active {
-    opacity: 1;
-    transform: translateY(0);
-    position: relative;
-    pointer-events: auto;
-  }
-  .rb-ann-msg--exit {
-    opacity: 0;
-    transform: translateY(-14px);
-  }
 </style>
 
 {% assign hero_full_height = true %}
@@ -103,51 +38,18 @@
             }
           </style>
 
-          {% comment %} Build message list {% endcomment %}
-          {% assign rb_msgs = '' | split: '|' %}
-          {% if section.settings.text != blank %}{% assign rb_msgs = rb_msgs | push: section.settings.text %}{% endif %}
-          {% if section.settings.text_2 != blank %}{% assign rb_msgs = rb_msgs | push: section.settings.text_2 %}{% endif %}
-          {% if section.settings.text_3 != blank %}{% assign rb_msgs = rb_msgs | push: section.settings.text_3 %}{% endif %}
-
           {% if section.settings.link == blank %}
-            <div class="announcement-bar rb-ann-bar" id="rb-ann-{{ section.id }}">
+            <div class="announcement-bar">
           {% else %}
-            <a href="{{ section.settings.link }}" class="announcement-bar announcement-bar--link rb-ann-bar" id="rb-ann-{{ section.id }}">
+            <a href="{{ section.settings.link }}" class="announcement-bar announcement-bar--link">
           {% endif %}
 
-            {% for msg in rb_msgs %}
-              <p class="announcement-bar__message rb-ann-msg{% if forloop.first %} rb-ann-msg--active{% endif %}"
-                 aria-hidden="{% unless forloop.first %}true{% else %}false{% endunless %}">
-                {{ msg | escape }}
-              </p>
-            {% endfor %}
+            <p class="announcement-bar__message">{{ section.settings.text | escape }}</p>
 
           {% if section.settings.link == blank %}
             </div>
           {% else %}
             </a>
-          {% endif %}
-
-          {% if rb_msgs.size > 1 %}
-            <script>
-              (function(){
-                var wrap = document.getElementById('rb-ann-{{ section.id }}');
-                if (!wrap) return;
-                var msgs = wrap.querySelectorAll('.rb-ann-msg');
-                var i = 0;
-                setInterval(function(){
-                  msgs[i].classList.remove('rb-ann-msg--active');
-                  msgs[i].classList.add('rb-ann-msg--exit');
-                  msgs[i].setAttribute('aria-hidden','true');
-                  setTimeout(function(){
-                    msgs[i].classList.remove('rb-ann-msg--exit');
-                    i = (i + 1) % msgs.length;
-                    msgs[i].classList.add('rb-ann-msg--active');
-                    msgs[i].setAttribute('aria-hidden','false');
-                  }, 450);
-                }, 4200);
-              })();
-            </script>
           {% endif %}
 
         {% endif %}
@@ -431,24 +333,13 @@
       {
         "type": "text",
         "id": "text",
-        "label": "Message 1",
-        "default": "FREE USA SHIPPING ON ORDERS OVER $50"
-      },
-      {
-        "type": "text",
-        "id": "text_2",
-        "label": "Message 2 (optional)",
-        "info": "Rotates every 4 seconds when set"
-      },
-      {
-        "type": "text",
-        "id": "text_3",
-        "label": "Message 3 (optional)"
+        "label": "Text",
+        "default": "Announce something here"
       },
       {
         "type": "url",
         "id": "link",
-        "label": "Link (applies to all messages)"
+        "label": "Link"
       },
       {
         "type": "color",
