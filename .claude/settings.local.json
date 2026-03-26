@@ -3,8 +3,7 @@
     "allow": [
       "Bash(claude mcp:*)",
       "Bash(python3:*)",
-      "Bash(node:*)",
-      "Bash(cd:*)"
+      "Bash(node:*)"
     ]
   }
 }
