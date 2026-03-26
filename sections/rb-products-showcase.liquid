@@ -1,0 +1,234 @@
+{% comment %}
+  Royal Beardsmen — Products Showcase
+  Premium product grid with scent profile chips, hover quick-add, and gold accents.
+  Pulls from a configurable collection.
+{% endcomment %}
+
+<section class="rb-section rb-products" data-section-id="{{ section.id }}" data-section-type="rb-products-showcase">
+  <div class="rb-container">
+
+    <div class="rb-section-header rb-reveal">
+      <span class="rb-label">{{ section.settings.label | default: 'The Arsenal' }}</span>
+      <div class="rb-divider"></div>
+      <h2>{{ section.settings.title | default: 'Built for the Brotherhood' }}</h2>
+      {% if section.settings.description != blank %}
+        <p>{{ section.settings.description }}</p>
+      {% endif %}
+    </div>
+
+    <div class="rb-product-grid">
+      {% assign featured_collection = collections[section.settings.collection] %}
+      {% if featured_collection != blank and featured_collection.products_count > 0 %}
+        {% assign limit = section.settings.product_limit | default: 4 %}
+        {% for product in featured_collection.products limit: limit %}
+          <div class="rb-product-card rb-reveal rb-reveal--delay-{{ forloop.index }}">
+
+            <a href="{{ product.url }}" class="rb-product-card__media" aria-label="{{ product.title | escape }}">
+              {% if product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 600, height: 750, crop: 'center' }}"
+                  srcset="{{ product.featured_image | image_url: width: 400, height: 500, crop: 'center' }} 400w,
+                          {{ product.featured_image | image_url: width: 600, height: 750, crop: 'center' }} 600w,
+                          {{ product.featured_image | image_url: width: 900, height: 1125, crop: 'center' }} 900w"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  alt="{{ product.title | escape }}"
+                  loading="lazy"
+                  width="600"
+                  height="750"
+                >
+              {% else %}
+                <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--rb-surface-3);">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--rb-border-light)" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 5-5 5 5 5-5"/><path d="M3 15l5 5 5-5 5 5"/></svg>
+                </div>
+              {% endif %}
+
+              {% if product.compare_at_price > product.price %}
+                <span class="rb-product-card__badge">Sale</span>
+              {% elsif product.tags contains 'bestseller' or product.tags contains 'best-seller' %}
+                <span class="rb-product-card__badge">Best Seller</span>
+              {% elsif product.tags contains 'new' %}
+                <span class="rb-product-card__badge">New</span>
+              {% endif %}
+
+              <div class="rb-product-card__quick-add">
+                <button
+                  type="button"
+                  class="rb-btn rb-btn--atc"
+                  data-product-id="{{ product.variants.first.id }}"
+                  onclick="event.preventDefault(); RBAddToCart({{ product.variants.first.id }}, this)"
+                  aria-label="Add {{ product.title | escape }} to cart"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </a>
+
+            <div class="rb-product-card__body">
+              <a href="{{ product.url }}" style="text-decoration:none;">
+                <h3 class="rb-product-card__name">{{ product.title }}</h3>
+              </a>
+
+              {% if product.metafields.rb.scent_notes != blank %}
+                <div class="rb-product-card__scent" aria-label="Scent notes">
+                  {% assign scents = product.metafields.rb.scent_notes | split: ',' %}
+                  {% for scent in scents limit: 3 %}
+                    <span class="rb-scent-chip">{{ scent | strip }}</span>
+                  {% endfor %}
+                </div>
+              {% elsif product.tags contains 'cedarwood' or product.tags contains 'sandalwood' or product.tags contains 'vanilla' or product.tags contains 'pine' %}
+                <div class="rb-product-card__scent" aria-label="Scent notes">
+                  {% for tag in product.tags %}
+                    {% assign tag_lower = tag | downcase %}
+                    {% if tag_lower == 'cedarwood' or tag_lower == 'sandalwood' or tag_lower == 'vanilla' or tag_lower == 'pine' or tag_lower == 'citrus' or tag_lower == 'eucalyptus' or tag_lower == 'tobacco' or tag_lower == 'leather' or tag_lower == 'mint' or tag_lower == 'bergamot' %}
+                      <span class="rb-scent-chip">{{ tag }}</span>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <div class="rb-product-card__footer">
+                <div>
+                  <span class="rb-product-card__price">{{ product.price | money }}</span>
+                  {% if product.compare_at_price > product.price %}
+                    <span class="rb-product-card__price--compare">{{ product.compare_at_price | money }}</span>
+                  {% endif %}
+                </div>
+                <a href="{{ product.url }}"
+                   class="rb-btn rb-btn--ghost"
+                   aria-label="View {{ product.title | escape }}">
+                  View
+                </a>
+              </div>
+            </div>
+
+          </div>
+        {% endfor %}
+      {% else %}
+        {%- comment -%} Placeholder cards for onboarding / empty collection {%- endcomment -%}
+        {% for i in (1..4) %}
+          <div class="rb-product-card">
+            <div class="rb-product-card__media" style="background:var(--rb-surface-2);display:flex;align-items:center;justify-content:center;">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--rb-border-light)" stroke-width="1" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m3 9 5-5 5 5 5-5"/></svg>
+            </div>
+            <div class="rb-product-card__body">
+              <h3 class="rb-product-card__name">Product Name</h3>
+              <div class="rb-product-card__scent">
+                <span class="rb-scent-chip">Cedarwood</span>
+                <span class="rb-scent-chip">Sandalwood</span>
+              </div>
+              <div class="rb-product-card__footer">
+                <span class="rb-product-card__price">$24.99</span>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    {% if section.settings.cta_text != blank %}
+      <div style="text-align:center;margin-top:3rem;" class="rb-reveal">
+        <a href="{{ section.settings.cta_url | default: '/collections/all' }}"
+           class="rb-btn rb-btn--outline">
+          {{ section.settings.cta_text }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<script>
+(function() {
+  function RBAddToCart(variantId, btn) {
+    if (!variantId || btn.disabled) return;
+    btn.disabled = true;
+    var original = btn.textContent;
+    btn.textContent = 'Adding...';
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ id: variantId, quantity: 1 })
+    })
+    .then(function(r) { return r.json(); })
+    .then(function() {
+      btn.textContent = 'Added!';
+      setTimeout(function() {
+        btn.textContent = original;
+        btn.disabled = false;
+      }, 1800);
+      // Update cart count if element exists
+      fetch('/cart.js')
+        .then(function(r) { return r.json(); })
+        .then(function(cart) {
+          var counts = document.querySelectorAll('[data-rb-cart-count]');
+          counts.forEach(function(el) { el.textContent = cart.item_count; });
+        });
+    })
+    .catch(function() {
+      btn.textContent = 'Error';
+      setTimeout(function() { btn.textContent = original; btn.disabled = false; }, 1800);
+    });
+  }
+  window.RBAddToCart = RBAddToCart;
+})();
+</script>
+
+{% schema %}
+{
+  "name": "RB — Product Showcase",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Eyebrow label",
+      "default": "The Arsenal"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "Built for the Brotherhood"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Section description",
+      "default": "Premium beard oils, balms, and washes engineered from all-natural ingredients. Every formula tells a story."
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection to display"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "label": "Number of products",
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "View all button text",
+      "default": "View Full Collection"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "View all button URL",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB — Product Showcase",
+      "category": "Royal Beardsmen"
+    }
+  ]
+}
+{% endschema %}

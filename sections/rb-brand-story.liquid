@@ -1,0 +1,241 @@
+{% comment %}
+  Royal Beardsmen — Brand Story Section
+  Split layout: lifestyle image left + manifesto + pillars right.
+  Deep emotional connection with the brand.
+{% endcomment %}
+
+<section class="rb-section rb-story" data-section-id="{{ section.id }}" data-section-type="rb-brand-story">
+  <div class="rb-container">
+    <div class="rb-story__inner">
+
+      <div class="rb-story__image rb-reveal">
+        {% if section.settings.image %}
+          <img
+            src="{{ section.settings.image | image_url: width: 800, height: 1000, crop: 'center' }}"
+            srcset="{{ section.settings.image | image_url: width: 600, height: 750, crop: 'center' }} 600w,
+                    {{ section.settings.image | image_url: width: 800, height: 1000, crop: 'center' }} 800w,
+                    {{ section.settings.image | image_url: width: 1200, height: 1500, crop: 'center' }} 1200w"
+            sizes="(min-width: 768px) 50vw, 100vw"
+            alt="{{ section.settings.image_alt | default: 'Royal Beardsmen — Crafted with Purpose' | escape }}"
+            loading="lazy"
+            width="800"
+            height="1000"
+          >
+        {% else %}
+          <div style="width:100%;height:100%;background:var(--rb-surface-3);display:flex;align-items:center;justify-content:center;">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--rb-border-light)" stroke-width="1" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-2a5 5 0 0 1 10 0v2"/></svg>
+          </div>
+        {% endif %}
+        <div class="rb-story__image-accent"></div>
+        <div class="rb-story__image-tag">
+          <div class="rb-story__image-tag-stat">
+            {{ section.settings.stat_number | default: '2018' }}
+          </div>
+          <div class="rb-story__image-tag-label">
+            {{ section.settings.stat_label | default: 'Founded — Built to Last' }}
+          </div>
+        </div>
+      </div>
+
+      <div class="rb-story__text rb-reveal rb-reveal--delay-1">
+        <span class="rb-label">{{ section.settings.label | default: 'Our Story' }}</span>
+        <div class="rb-divider rb-divider--left"></div>
+        <h2 style="font-family:var(--font-heading);font-size:clamp(2rem,4vw,3rem);font-weight:600;font-style:italic;line-height:1.1;color:var(--rb-text);margin:0 0 0.5rem;">
+          {{ section.settings.heading | default: 'More Than Grooming.<br>A Way of Life.' }}
+        </h2>
+
+        <blockquote class="rb-story__manifesto">
+          {{ section.settings.manifesto | default: 'Every great man starts his morning with intention. We built Royal Beardsmen for those who refuse to settle — for the man who demands the best from himself and the products he uses.' }}
+        </blockquote>
+
+        {% if section.settings.body != blank %}
+          <p class="rb-body">{{ section.settings.body }}</p>
+        {% endif %}
+
+        <div class="rb-story__pillars">
+          {% for block in section.blocks %}
+            {% if block.type == 'pillar' %}
+              <div class="rb-story__pillar" {{ block.shopify_attributes }}>
+                <div class="rb-story__pillar-icon" aria-hidden="true">
+                  {% case block.settings.icon %}
+                    {% when 'leaf' %}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                    {% when 'flame' %}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                    {% when 'star' %}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    {% when 'shield' %}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    {% else %}
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  {% endcase %}
+                </div>
+                <div class="rb-story__pillar-content">
+                  <h4>{{ block.settings.title }}</h4>
+                  <p>{{ block.settings.description }}</p>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if section.settings.cta_text != blank %}
+          <div style="margin-top:2.5rem;">
+            <a href="{{ section.settings.cta_url | default: '/pages/about' }}"
+               class="rb-btn rb-btn--outline">
+              {{ section.settings.cta_text }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RB — Brand Story",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Story image",
+      "info": "Ideal: dark lifestyle photo, man grooming. Recommended 800×1000px."
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Royal Beardsmen — Crafted with Purpose"
+    },
+    {
+      "type": "header",
+      "content": "Stat overlay"
+    },
+    {
+      "type": "text",
+      "id": "stat_number",
+      "label": "Stat / year",
+      "default": "2018"
+    },
+    {
+      "type": "text",
+      "id": "stat_label",
+      "label": "Stat label",
+      "default": "Founded — Built to Last"
+    },
+    {
+      "type": "header",
+      "content": "Text content"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Eyebrow label",
+      "default": "Our Story"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "More Than Grooming.<br>A Way of Life."
+    },
+    {
+      "type": "textarea",
+      "id": "manifesto",
+      "label": "Pull quote / manifesto",
+      "default": "Every great man starts his morning with intention. We built Royal Beardsmen for those who refuse to settle — for the man who demands the best from himself and the products he uses."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body copy",
+      "default": "Using premium carrier oils, botanical extracts, and thoughtfully designed scent profiles — every Royal Beardsmen product is a commitment to craft."
+    },
+    {
+      "type": "header",
+      "content": "CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Button text",
+      "default": "Discover Our Story"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button URL",
+      "default": "/pages/about"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "pillar",
+      "name": "Brand Pillar",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "leaf", "label": "Leaf (Natural)" },
+            { "value": "flame", "label": "Flame (Passion)" },
+            { "value": "star", "label": "Star (Premium)" },
+            { "value": "shield", "label": "Shield (Trust)" },
+            { "value": "check", "label": "Checkmark" }
+          ],
+          "default": "leaf"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "All-Natural Formulas"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Zero fillers, zero synthetic shortcuts. Every ingredient earns its place."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB — Brand Story",
+      "category": "Royal Beardsmen",
+      "blocks": [
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "leaf",
+            "title": "All-Natural Formulas",
+            "description": "Zero fillers, zero synthetic shortcuts. Every ingredient earns its place."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "flame",
+            "title": "Signature Scent Profiles",
+            "description": "Crafted by master perfumers. Bold, masculine, and unforgettable."
+          }
+        },
+        {
+          "type": "pillar",
+          "settings": {
+            "icon": "shield",
+            "title": "30-Day Guarantee",
+            "description": "We stand behind every product. If you're not satisfied, neither are we."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

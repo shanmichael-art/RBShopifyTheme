@@ -46,6 +46,9 @@
   {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
   {% include 'google-fonts' %}
 
+  <!-- Royal Beardsmen Design System ================================================== -->
+  {{ 'rb-revamp.css' | asset_url | stylesheet_tag }}
+
   <!-- Sections ================================================== -->
   <script>
     window.theme = window.theme || {};
@@ -125,10 +128,18 @@
 
   <div id="PageContainer" class="page-container">
 
-    {% section 'header' %}
-
     {% if template.name == "index" %}
-      {% section 'slideshow' %}
+      {% section 'rb-header' %}
+    {% else %}
+      {% section 'header' %}
+    {% endif %}
+
+    {% comment %}
+      Legacy slideshow only renders on non-rb-revamp pages.
+      Homepage uses rb-hero section directly in index.liquid.
+    {% endcomment %}
+    {% if template.name == "index" %}
+      {%- comment -%}{% section 'slideshow' %}{%- endcomment -%}
     {% endif %}
 
     <main class="main-content" role="main">
@@ -198,6 +209,47 @@
     <!-- **END** Hextom FSB Integration // Main Include - DO NOT MODIFY -->
 {% include 'socialboost-widgets' %} {% include 'storeifyapps-storelocator-footer' %}
 
+<!-- Royal Beardsmen — Scroll Reveal + Header Behavior -->
+<script>
+(function() {
+  'use strict';
+
+  // ── Scroll-triggered reveal ────────────────────────────────
+  if (typeof IntersectionObserver !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
+
+    document.querySelectorAll('.rb-reveal').forEach(function(el) {
+      io.observe(el);
+    });
+  } else {
+    // Fallback: show all immediately
+    document.querySelectorAll('.rb-reveal').forEach(function(el) {
+      el.classList.add('is-visible');
+    });
+  }
+
+  // ── Sticky header scroll class ────────────────────────────
+  var header = document.querySelector('.rb-header');
+  if (header) {
+    var onScroll = function() {
+      if (window.scrollY > 60) {
+        header.classList.add('is-scrolled');
+      } else {
+        header.classList.remove('is-scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+})();
+</script>
 
 </body>
 </html>

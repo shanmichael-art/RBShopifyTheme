@@ -1,0 +1,116 @@
+{% comment %}
+  Royal Beardsmen — Premium Header
+  Transparent-to-solid on scroll. Sticky fixed position.
+  Mobile: hamburger triggers existing drawer menu.
+{% endcomment %}
+
+<header class="rb-header" data-section-id="{{ section.id }}" data-section-type="rb-header" role="banner">
+  <div class="rb-header__inner">
+
+    <div class="rb-header__logo">
+      {% if settings.logo %}
+        <a href="{{ routes.root_url }}" aria-label="{{ shop.name }}">
+          <img
+            src="{{ settings.logo | image_url: width: 300 }}"
+            alt="{{ shop.name | escape }}"
+            width="{{ settings.logo.width }}"
+            height="{{ settings.logo.height }}"
+            style="max-height:2.5rem;width:auto;"
+            loading="eager"
+          >
+        </a>
+      {% else %}
+        <a href="{{ routes.root_url }}" class="rb-header__logo-text" aria-label="{{ shop.name }}">
+          Royal <span>Beardsmen</span>
+        </a>
+      {% endif %}
+    </div>
+
+    {% if linklists[section.settings.main_menu].links.size > 0 %}
+      <nav aria-label="Main navigation">
+        <ul class="rb-header__nav" role="list">
+          {% for link in linklists[section.settings.main_menu].links %}
+            <li>
+              <a href="{{ link.url }}"
+                 {% if link.active %}aria-current="page"{% endif %}>
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+
+    <div class="rb-header__actions">
+
+      {%- comment -%} Search {%- endcomment -%}
+      <button type="button"
+              class="rb-header__icon-btn js-search-bar-toggle"
+              aria-label="Search"
+              aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+
+      {%- comment -%} Account {%- endcomment -%}
+      {% if shop.customer_accounts_enabled %}
+        <a href="{% if customer %}/account{% else %}/account/login{% endif %}"
+           class="rb-header__icon-btn"
+           aria-label="{% if customer %}My account{% else %}Sign in{% endif %}">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+      {% endif %}
+
+      {%- comment -%} Cart {%- endcomment -%}
+      <div class="rb-header__cart-wrapper">
+        <a href="{{ routes.cart_url }}"
+           class="rb-header__icon-btn js-cart-toggle"
+           aria-label="Cart ({{ cart.item_count }} items)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          {% if cart.item_count > 0 %}
+            <span class="rb-header__cart-count" data-rb-cart-count aria-label="{{ cart.item_count }} items in cart">
+              {{ cart.item_count }}
+            </span>
+          {% else %}
+            <span class="rb-header__cart-count" data-rb-cart-count style="display:none;" aria-hidden="true">0</span>
+          {% endif %}
+        </a>
+      </div>
+
+      {%- comment -%} Mobile hamburger — triggers existing drawer {%- endcomment -%}
+      <button type="button"
+              class="rb-header__icon-btn js-drawer-open-left"
+              aria-label="Open menu"
+              aria-controls="NavDrawer"
+              style="display:none;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+
+    </div>
+  </div>
+</header>
+
+<style>
+  @media (max-width: 1024px) {
+    .rb-header__actions .js-drawer-open-left {
+      display: flex !important;
+    }
+  }
+  /* Push page content below fixed header */
+  .rb-hero { padding-top: 5rem; }
+  #PageContainer > .main-content:first-child { padding-top: 5rem; }
+</style>
+
+{% schema %}
+{
+  "name": "RB — Header",
+  "tag": "header",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "main_menu",
+      "label": "Main navigation menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}

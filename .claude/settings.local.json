@@ -10,7 +10,18 @@
       "Bash(python -c \"import json; d=json.load\\(open\\(''C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/config/settings_data.json''\\)\\); print\\(d[''current''][''content_for_index'']\\)\")",
       "Bash(python -c \"import sys,json,re; s=sys.stdin.read\\(\\); m=re.search\\(r''''content_for_index.*?\\\\[.*?\\\\]'''', s\\); print\\(m.group\\(\\)[:200] if m else ''''not found''''\\)\")",
       "Bash(ls C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/sections/rb-*.liquid)",
-      "Bash(grep -c \"section ''slideshow''\" C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/layout/theme.liquid)"
+      "Bash(grep -c \"section ''slideshow''\" C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/layout/theme.liquid)",
+      "Bash(py3 --version)",
+      "Bash(ls /c/Python*/python.exe)",
+      "Read(//c/Users/shanm/AppData/Local/Programs/Python/**)",
+      "Read(//c/Users/shanm/AppData/Local/Programs/Python//**)",
+      "Bash(/c/Users/shanm/AppData/Local/Microsoft/WindowsApps/python3.exe .claude/skills/ui-ux-pro-max/scripts/search.py \"premium ecommerce beard grooming masculine luxury brand\" --design-system --persist -p \"Royal Beardsmen\" -f markdown)",
+      "Bash(cmd.exe /c \"python --version\")",
+      "Bash(cmd.exe /c \"python3 --version\")",
+      "Bash(cmd.exe /c \"where python\" 2>&1)",
+      "Bash(grep -E \"\\\\.\\(css|scss|js\\)$\")",
+      "mcp__shopify-dev-mcp__learn_shopify_api",
+      "mcp__shopify-dev-mcp__validate_theme"
     ]
   }
 }

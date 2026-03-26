@@ -1,0 +1,1261 @@
+/* ============================================================
+   ROYAL BEARDSMEN — Design System & Component Overrides
+   v2.0 | 2026
+   ============================================================ */
+
+/* ── 1. DESIGN TOKENS ──────────────────────────────────────── */
+:root {
+  /* Colors */
+  --rb-base:        #0D0D0B;
+  --rb-surface:     #161412;
+  --rb-surface-2:   #1E1B18;
+  --rb-surface-3:   #272320;
+  --rb-border:      #292521;
+  --rb-border-light:#3D3733;
+
+  --rb-text:        #FAF9F7;
+  --rb-text-muted:  #A8A29E;
+  --rb-text-dim:    #78716C;
+
+  --rb-gold:        #C9A84C;
+  --rb-gold-dark:   #9A7B2E;
+  --rb-gold-light:  #E8D5A3;
+  --rb-gold-hover:  #D4A853;
+
+  --rb-white:       #FFFFFF;
+  --rb-error:       #EF4444;
+  --rb-success:     #22C55E;
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Montserrat', -apple-system, sans-serif;
+
+  /* Spacing */
+  --section-pad-y: clamp(4rem, 8vw, 8rem);
+  --section-pad-x: clamp(1.25rem, 5vw, 2.5rem);
+  --max-w:         1280px;
+
+  /* Borders & Radii */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.45);
+  --shadow-gold: 0 0 0 1px rgba(201,168,76,0.25);
+
+  /* Transitions */
+  --ease:     cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur-base: 250ms;
+  --dur-slow: 400ms;
+}
+
+/* ── 2. GOOGLE FONTS IMPORT ────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ── 3. BASE RESETS FOR RB SECTIONS ───────────────────────── */
+.rb-section {
+  background-color: var(--rb-base);
+  color: var(--rb-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rb-section *,
+.rb-section *::before,
+.rb-section *::after {
+  box-sizing: border-box;
+}
+
+.rb-container {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: var(--section-pad-x);
+}
+
+/* ── 4. TYPOGRAPHY SCALE ───────────────────────────────────── */
+.rb-display {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.rb-display--xl  { font-size: clamp(3rem, 7vw, 6.5rem); }
+.rb-display--lg  { font-size: clamp(2.25rem, 5vw, 4rem); }
+.rb-display--md  { font-size: clamp(1.75rem, 3.5vw, 2.75rem); }
+
+.rb-label {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rb-gold);
+}
+
+.rb-body {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  line-height: 1.75;
+  color: var(--rb-text-muted);
+}
+
+/* ── 5. BUTTONS ────────────────────────────────────────────── */
+.rb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-sm);
+  transition: all var(--dur-base) var(--ease-out);
+  white-space: nowrap;
+  -webkit-appearance: none;
+}
+
+.rb-btn--primary {
+  background-color: var(--rb-gold);
+  color: var(--rb-base);
+}
+.rb-btn--primary:hover {
+  background-color: var(--rb-gold-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+  color: var(--rb-base);
+  text-decoration: none;
+}
+.rb-btn--primary:active {
+  transform: translateY(0);
+}
+
+.rb-btn--outline {
+  background-color: transparent;
+  color: var(--rb-text);
+  border: 1px solid var(--rb-border-light);
+}
+.rb-btn--outline:hover {
+  border-color: var(--rb-gold);
+  color: var(--rb-gold);
+  text-decoration: none;
+}
+
+.rb-btn--ghost {
+  background-color: transparent;
+  color: var(--rb-gold);
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+}
+.rb-btn--ghost::after {
+  content: '';
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--rb-gold);
+  transform: scaleX(0.3);
+  transform-origin: left;
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.rb-btn--ghost:hover::after {
+  transform: scaleX(1);
+}
+.rb-btn--ghost:hover {
+  text-decoration: none;
+  color: var(--rb-gold-hover);
+}
+
+.rb-btn--atc {
+  width: 100%;
+  justify-content: center;
+  background-color: var(--rb-gold);
+  color: var(--rb-base);
+}
+.rb-btn--atc:hover {
+  background-color: var(--rb-gold-hover);
+  color: var(--rb-base);
+  text-decoration: none;
+}
+
+/* ── 6. GOLD DIVIDER ───────────────────────────────────────── */
+.rb-divider {
+  display: block;
+  width: 3rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rb-gold), transparent);
+  margin: 1.25rem auto;
+}
+.rb-divider--left {
+  margin-left: 0;
+}
+
+/* ── 7. SECTION HEADERS ────────────────────────────────────── */
+.rb-section-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.rb-section-header--left {
+  text-align: left;
+}
+.rb-section-header .rb-label {
+  display: block;
+  margin-bottom: 0.875rem;
+}
+.rb-section-header h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.1;
+  color: var(--rb-text);
+  margin: 0 0 0.5rem;
+}
+.rb-section-header p {
+  max-width: 42ch;
+  margin: 1rem auto 0;
+  color: var(--rb-text-muted);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.rb-section-header--left p {
+  margin-left: 0;
+}
+
+/* ── 8. HERO SECTION ───────────────────────────────────────── */
+.rb-hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background-color: var(--rb-base);
+}
+
+.rb-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.rb-hero__bg img,
+.rb-hero__bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.rb-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    165deg,
+    rgba(13,13,11,0.25) 0%,
+    rgba(13,13,11,0.55) 40%,
+    rgba(13,13,11,0.88) 100%
+  );
+  z-index: 1;
+}
+/* Grain texture */
+.rb-hero__overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.rb-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: var(--section-pad-y) var(--section-pad-x);
+  padding-top: 8rem;
+  max-width: calc(var(--max-w) + 2 * var(--section-pad-x));
+  margin-inline: auto;
+}
+
+.rb-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.rb-hero__eyebrow-line {
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--rb-gold);
+}
+.rb-hero__eyebrow-text {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rb-gold);
+}
+
+.rb-hero__headline {
+  font-family: var(--font-heading);
+  font-size: clamp(3.25rem, 8vw, 7.5rem);
+  font-weight: 600;
+  font-style: italic;
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  color: var(--rb-text);
+  max-width: 14ch;
+  margin: 0 0 1.5rem;
+}
+.rb-hero__headline em {
+  font-style: normal;
+  color: var(--rb-gold-light);
+}
+
+.rb-hero__sub {
+  font-family: var(--font-body);
+  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(250,249,247,0.75);
+  max-width: 44ch;
+  margin: 0 0 2.5rem;
+}
+
+.rb-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rb-hero__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  right: var(--section-pad-x);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rb-hero__scroll-text {
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rb-text-dim);
+  writing-mode: vertical-rl;
+}
+.rb-hero__scroll-line {
+  width: 1px;
+  height: 3rem;
+  background: linear-gradient(to bottom, var(--rb-gold), transparent);
+  animation: rb-scroll-pulse 2s ease-in-out infinite;
+}
+@keyframes rb-scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* ── 9. TRUST BAR ──────────────────────────────────────────── */
+.rb-trust-bar {
+  background-color: var(--rb-surface);
+  border-top: 1px solid var(--rb-border);
+  border-bottom: 1px solid var(--rb-border);
+  padding: 1.375rem var(--section-pad-x);
+}
+
+.rb-trust-bar__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 2.5rem;
+}
+
+.rb-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0;
+}
+.rb-trust-item__icon {
+  flex-shrink: 0;
+  width: 1.375rem;
+  height: 1.375rem;
+  color: var(--rb-gold);
+}
+.rb-trust-item__text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rb-text-muted);
+}
+
+/* ── 10. PRODUCT SHOWCASE ──────────────────────────────────── */
+.rb-products {
+  background-color: var(--rb-base);
+  padding-block: var(--section-pad-y);
+}
+
+.rb-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.rb-product-card {
+  position: relative;
+  background-color: var(--rb-surface);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease),
+              transform var(--dur-base) var(--ease),
+              box-shadow var(--dur-base) var(--ease);
+  cursor: pointer;
+}
+.rb-product-card:hover {
+  border-color: var(--rb-gold-dark);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card), var(--shadow-gold);
+}
+
+.rb-product-card__media {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background-color: var(--rb-surface-2);
+}
+.rb-product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+.rb-product-card:hover .rb-product-card__media img {
+  transform: scale(1.04);
+}
+
+.rb-product-card__badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--rb-gold);
+  color: var(--rb-base);
+  font-family: var(--font-body);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-sm);
+}
+
+.rb-product-card__quick-add {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform var(--dur-base) var(--ease-out);
+}
+.rb-product-card:hover .rb-product-card__quick-add {
+  transform: translateY(0);
+}
+
+.rb-product-card__body {
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+.rb-product-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--rb-text);
+  margin: 0 0 0.375rem;
+  line-height: 1.2;
+}
+.rb-product-card__scent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin: 0.625rem 0;
+}
+.rb-scent-chip {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rb-text-dim);
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--radius-full);
+  padding: 0.2rem 0.625rem;
+  transition: border-color var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease);
+}
+.rb-product-card:hover .rb-scent-chip {
+  border-color: var(--rb-gold-dark);
+  color: var(--rb-gold-light);
+}
+.rb-product-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rb-border);
+}
+.rb-product-card__price {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--rb-text);
+}
+.rb-product-card__price--compare {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--rb-text-dim);
+  text-decoration: line-through;
+  margin-left: 0.5rem;
+}
+
+/* ── 11. BRAND STORY ───────────────────────────────────────── */
+.rb-story {
+  background-color: var(--rb-surface);
+  padding-block: var(--section-pad-y);
+  position: relative;
+  overflow: hidden;
+}
+.rb-story::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(ellipse 60% 50% at 80% 50%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.rb-story__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .rb-story__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rb-story__image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+}
+.rb-story__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rb-story__image-accent {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  height: 40%;
+  background: linear-gradient(to top, var(--rb-surface) 0%, transparent 100%);
+}
+.rb-story__image-tag {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: rgba(22,20,18,0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+}
+.rb-story__image-tag-stat {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--rb-gold);
+  line-height: 1;
+}
+.rb-story__image-tag-label {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--rb-text-muted);
+  margin-top: 0.25rem;
+}
+
+.rb-story__text {
+  position: relative;
+  z-index: 1;
+}
+.rb-story__manifesto {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--rb-text);
+  line-height: 1.3;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--rb-gold);
+}
+.rb-story__pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.rb-story__pillar {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.rb-story__pillar-icon {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rb-gold);
+  margin-top: 0.125rem;
+}
+.rb-story__pillar-content h4 {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rb-text);
+  margin: 0 0 0.25rem;
+}
+.rb-story__pillar-content p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--rb-text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── 12. BUNDLE OFFER ──────────────────────────────────────── */
+.rb-bundle {
+  background-color: var(--rb-base);
+  padding-block: var(--section-pad-y);
+}
+
+.rb-bundle__inner {
+  background-color: var(--rb-surface-2);
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+  .rb-bundle__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rb-bundle__visual {
+  position: relative;
+  background-color: var(--rb-surface);
+  min-height: 28rem;
+  overflow: hidden;
+}
+.rb-bundle__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.rb-bundle__visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13,13,11,0.3) 0%, transparent 60%);
+}
+.rb-bundle__savings-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--rb-gold);
+  color: var(--rb-base);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  text-align: center;
+  line-height: 1.15;
+}
+.rb-bundle__savings-badge strong {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.rb-bundle__savings-badge span {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.rb-bundle__offer {
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+.rb-bundle__includes {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.rb-bundle__includes li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: var(--rb-text-muted);
+}
+.rb-bundle__includes li svg {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--rb-gold);
+}
+.rb-bundle__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.rb-bundle__price-now {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--rb-text);
+  line-height: 1;
+}
+.rb-bundle__price-was {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--rb-text-dim);
+  text-decoration: line-through;
+}
+.rb-bundle__price-save {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--rb-success);
+  background-color: rgba(34,197,94,0.12);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+}
+
+/* ── 13. TESTIMONIALS ──────────────────────────────────────── */
+.rb-testimonials {
+  background-color: var(--rb-surface);
+  padding-block: var(--section-pad-y);
+}
+
+.rb-testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 1.5rem;
+}
+
+.rb-review-card {
+  background-color: var(--rb-surface-2);
+  border: 1px solid var(--rb-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--dur-base) var(--ease);
+}
+.rb-review-card:hover {
+  border-color: var(--rb-border-light);
+}
+
+.rb-review-card__stars {
+  display: flex;
+  gap: 0.25rem;
+  color: var(--rb-gold);
+}
+.rb-review-card__stars svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rb-review-card__text {
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  color: var(--rb-text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+.rb-review-card__text::before {
+  content: open-quote;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: -0.8rem;
+  color: var(--rb-gold-dark);
+  margin-right: 0.25rem;
+}
+
+.rb-review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rb-border);
+}
+.rb-review-card__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--rb-surface-3);
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--rb-border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--rb-gold);
+}
+.rb-review-card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rb-review-card__name {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--rb-text);
+}
+.rb-review-card__meta {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--rb-text-dim);
+}
+.rb-review-card__verified {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--rb-success);
+  margin-top: 0.125rem;
+}
+.rb-review-card__verified svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+/* ── 14. ANNOUNCEMENT BAR ──────────────────────────────────── */
+.rb-announcement {
+  background-color: var(--rb-gold);
+  padding: 0.6rem var(--section-pad-x);
+  text-align: center;
+}
+.rb-announcement__text {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rb-base);
+}
+
+/* ── 15. HEADER OVERRIDE ───────────────────────────────────── */
+.rb-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: background-color var(--dur-base) var(--ease),
+              border-color var(--dur-base) var(--ease),
+              backdrop-filter var(--dur-base) var(--ease);
+  border-bottom: 1px solid transparent;
+}
+.rb-header.is-scrolled {
+  background-color: rgba(13,13,11,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-color: var(--rb-border);
+}
+.rb-header__inner {
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: 1.25rem var(--section-pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.rb-header__logo {
+  flex-shrink: 0;
+}
+.rb-header__logo img {
+  height: 2.5rem;
+  width: auto;
+}
+.rb-header__logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.625rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--rb-text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.rb-header__logo-text span {
+  color: var(--rb-gold);
+}
+.rb-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 1024px) {
+  .rb-header__nav {
+    display: none;
+  }
+}
+.rb-header__nav a {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(250,249,247,0.75);
+  text-decoration: none;
+  padding: 0.5rem 0.875rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease),
+              background-color var(--dur-fast) var(--ease);
+}
+.rb-header__nav a:hover {
+  color: var(--rb-text);
+  background-color: var(--rb-surface-2);
+}
+
+.rb-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.rb-header__icon-btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(250,249,247,0.75);
+  border-radius: var(--radius-sm);
+  transition: color var(--dur-fast) var(--ease),
+              background-color var(--dur-fast) var(--ease);
+  cursor: pointer;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.rb-header__icon-btn:hover {
+  color: var(--rb-text);
+  background-color: var(--rb-surface-2);
+}
+.rb-header__icon-btn svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.rb-header__cart-count {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background-color: var(--rb-gold);
+  color: var(--rb-base);
+  border-radius: 50%;
+  font-size: 0.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rb-header__cart-wrapper {
+  position: relative;
+}
+
+/* ── 16. FOOTER ────────────────────────────────────────────── */
+.rb-footer {
+  background-color: var(--rb-surface);
+  border-top: 1px solid var(--rb-border);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.rb-footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.25fr;
+  gap: clamp(2rem, 4vw, 4rem);
+}
+@media (max-width: 1024px) {
+  .rb-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .rb-footer__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rb-footer__brand-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--rb-text);
+  margin: 0 0 0.75rem;
+}
+.rb-footer__brand-name span {
+  color: var(--rb-gold);
+}
+.rb-footer__brand-desc {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--rb-text-dim);
+  max-width: 28ch;
+  margin: 0 0 1.5rem;
+}
+
+.rb-footer__social {
+  display: flex;
+  gap: 0.625rem;
+}
+.rb-footer__social-link {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rb-text-dim);
+  text-decoration: none;
+  transition: border-color var(--dur-fast) var(--ease),
+              color var(--dur-fast) var(--ease);
+}
+.rb-footer__social-link:hover {
+  border-color: var(--rb-gold);
+  color: var(--rb-gold);
+}
+.rb-footer__social-link svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rb-footer__col-title {
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--rb-text);
+  margin: 0 0 1.25rem;
+}
+.rb-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.rb-footer__links a {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--rb-text-dim);
+  text-decoration: none;
+  transition: color var(--dur-fast) var(--ease);
+}
+.rb-footer__links a:hover {
+  color: var(--rb-gold);
+}
+
+.rb-footer__newsletter-form {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--rb-border-light);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-top: 1.25rem;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.rb-footer__newsletter-form:focus-within {
+  border-color: var(--rb-gold);
+}
+.rb-footer__newsletter-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  color: var(--rb-text);
+  outline: none;
+  min-width: 0;
+}
+.rb-footer__newsletter-input::placeholder {
+  color: var(--rb-text-dim);
+}
+.rb-footer__newsletter-btn {
+  background-color: var(--rb-gold);
+  color: var(--rb-base);
+  border: none;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease);
+  white-space: nowrap;
+}
+.rb-footer__newsletter-btn:hover {
+  background-color: var(--rb-gold-hover);
+}
+
+.rb-footer__bottom {
+  margin-top: 3rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rb-border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.rb-footer__copyright {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--rb-text-dim);
+}
+.rb-footer__payment-icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.rb-footer__payment-icons svg,
+.rb-footer__payment-icons img {
+  height: 1.5rem;
+  width: auto;
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+/* ── 17. SCROLL REVEAL ANIMATIONS ──────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .rb-reveal {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    transition: opacity var(--dur-slow) var(--ease-out),
+                transform var(--dur-slow) var(--ease-out);
+  }
+  .rb-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .rb-reveal--delay-1 { transition-delay: 100ms; }
+  .rb-reveal--delay-2 { transition-delay: 200ms; }
+  .rb-reveal--delay-3 { transition-delay: 300ms; }
+  .rb-reveal--delay-4 { transition-delay: 400ms; }
+}
+
+/* ── 18. MOBILE ADJUSTMENTS ────────────────────────────────── */
+@media (max-width: 640px) {
+  .rb-hero__headline {
+    max-width: 100%;
+  }
+  .rb-hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rb-hero__scroll {
+    display: none;
+  }
+  .rb-bundle__inner {
+    grid-template-columns: 1fr;
+  }
+  .rb-bundle__visual {
+    min-height: 18rem;
+  }
+}
+
+/* ── 19. UTILITY CLASSES ───────────────────────────────────── */
+.rb-visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+.rb-text-gold { color: var(--rb-gold); }
+.rb-text-muted { color: var(--rb-text-muted); }
+.rb-mt-0 { margin-top: 0; }

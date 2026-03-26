@@ -1,0 +1,226 @@
+{% comment %}
+  Royal Beardsmen — Testimonials Section
+  3-column premium review cards with star ratings, author + verified badge.
+  Supports dynamic blocks or static fallback copy.
+{% endcomment %}
+
+<section class="rb-section rb-testimonials" data-section-id="{{ section.id }}" data-section-type="rb-testimonials">
+  <div class="rb-container">
+
+    <div class="rb-section-header rb-reveal">
+      <span class="rb-label">{{ section.settings.label | default: 'The Brotherhood Speaks' }}</span>
+      <div class="rb-divider"></div>
+      <h2>{{ section.settings.title | default: 'Real Men. Real Results.' }}</h2>
+      {% if section.settings.aggregate_rating != blank %}
+        <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;margin-top:1rem;" aria-label="{{ section.settings.aggregate_rating }} out of 5 stars">
+          <div style="display:flex;gap:0.25rem;color:var(--rb-gold);">
+            {% for i in (1..5) %}
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            {% endfor %}
+          </div>
+          <span style="font-family:var(--font-body);font-size:0.875rem;font-weight:400;color:var(--rb-text-muted);">
+            {{ section.settings.aggregate_rating }} average · {{ section.settings.review_count | default: '500+' }} reviews
+          </span>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="rb-testimonial-grid">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          {% if block.type == 'review' %}
+            <div class="rb-review-card rb-reveal rb-reveal--delay-{{ forloop.index }}" {{ block.shopify_attributes }}>
+              <div class="rb-review-card__stars" aria-label="{{ block.settings.rating | default: 5 }} out of 5 stars">
+                {% assign rating = block.settings.rating | default: 5 | plus: 0 %}
+                {% for i in (1..5) %}
+                  {% if i <= rating %}
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  {% else %}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                  {% endif %}
+                {% endfor %}
+              </div>
+              <p class="rb-review-card__text">{{ block.settings.review_text }}</p>
+              <div class="rb-review-card__author">
+                <div class="rb-review-card__avatar" aria-hidden="true">
+                  {% if block.settings.avatar %}
+                    <img src="{{ block.settings.avatar | image_url: width: 80, height: 80, crop: 'center' }}"
+                         alt="{{ block.settings.reviewer_name | escape }}" loading="lazy" width="80" height="80">
+                  {% else %}
+                    {{ block.settings.reviewer_name | slice: 0 | upcase }}
+                  {% endif %}
+                </div>
+                <div>
+                  <div class="rb-review-card__name">{{ block.settings.reviewer_name | default: 'Anonymous' }}</div>
+                  {% if block.settings.reviewer_meta != blank %}
+                    <div class="rb-review-card__meta">{{ block.settings.reviewer_meta }}</div>
+                  {% endif %}
+                  <div class="rb-review-card__verified">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                    Verified Purchase
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+        {%- comment -%} Static fallback reviews {%- endcomment -%}
+        <div class="rb-review-card rb-reveal">
+          <div class="rb-review-card__stars" aria-label="5 out of 5 stars">
+            {% for i in (1..5) %}<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>{% endfor %}
+          </div>
+          <p class="rb-review-card__text">I've tried dozens of beard oils. Nothing comes close. The Cedar &amp; Mahogany scent is absolutely unreal — gets compliments from strangers. My beard has never looked or felt this good.</p>
+          <div class="rb-review-card__author">
+            <div class="rb-review-card__avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="rb-review-card__name">Marcus T.</div>
+              <div class="rb-review-card__meta">Chicago, IL · Beard Oil</div>
+              <div class="rb-review-card__verified">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                Verified Purchase
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rb-review-card rb-reveal rb-reveal--delay-1">
+          <div class="rb-review-card__stars" aria-label="5 out of 5 stars">
+            {% for i in (1..5) %}<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>{% endfor %}
+          </div>
+          <p class="rb-review-card__text">The Royal Kit was a gift for myself after my promotion. Worth every penny. The packaging feels premium, the scent lasts all day, and my barber literally stopped mid-cut to ask what I'm using.</p>
+          <div class="rb-review-card__author">
+            <div class="rb-review-card__avatar" aria-hidden="true">D</div>
+            <div>
+              <div class="rb-review-card__name">Darius W.</div>
+              <div class="rb-review-card__meta">Atlanta, GA · The Royal Kit</div>
+              <div class="rb-review-card__verified">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                Verified Purchase
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rb-review-card rb-reveal rb-reveal--delay-2">
+          <div class="rb-review-card__stars" aria-label="5 out of 5 stars">
+            {% for i in (1..5) %}<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>{% endfor %}
+          </div>
+          <p class="rb-review-card__text">Been a customer for 2 years. The consistency is what keeps me coming back — same incredible quality every single order. The Vanilla Smoke scent is my everyday. Never going back to drugstore products.</p>
+          <div class="rb-review-card__author">
+            <div class="rb-review-card__avatar" aria-hidden="true">J</div>
+            <div>
+              <div class="rb-review-card__name">James R.</div>
+              <div class="rb-review-card__meta">Houston, TX · Beard Balm</div>
+              <div class="rb-review-card__verified">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                Verified Purchase
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if section.settings.cta_text != blank %}
+      <div style="text-align:center;margin-top:3rem;" class="rb-reveal">
+        <a href="{{ section.settings.cta_url | default: '/pages/reviews' }}"
+           class="rb-btn rb-btn--ghost">
+          {{ section.settings.cta_text | default: 'Read All Reviews' }}
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "RB — Testimonials",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Eyebrow label",
+      "default": "The Brotherhood Speaks"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section title",
+      "default": "Real Men. Real Results."
+    },
+    {
+      "type": "text",
+      "id": "aggregate_rating",
+      "label": "Aggregate star rating",
+      "default": "4.9",
+      "info": "e.g. 4.9"
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Total review count",
+      "default": "500+"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA button text",
+      "default": "Read All Reviews"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Star rating",
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review text"
+        },
+        {
+          "type": "image_picker",
+          "id": "avatar",
+          "label": "Reviewer avatar (optional)"
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer name",
+          "default": "Marcus T."
+        },
+        {
+          "type": "text",
+          "id": "reviewer_meta",
+          "label": "Reviewer meta (city · product)",
+          "default": "Chicago, IL · Beard Oil"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "RB — Testimonials",
+      "category": "Royal Beardsmen"
+    }
+  ]
+}
+{% endschema %}
