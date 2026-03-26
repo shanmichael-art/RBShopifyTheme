@@ -1,0 +1,114 @@
+{% comment %} Royal Beardsmen — Stats / Trust Bar {% endcomment %}
+<style>
+  .rb-stats {
+    background: #c9a96e;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .rb-stats__inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 100%;
+  }
+
+  .rb-stats__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 24px;
+    border-right: 1px solid rgba(0,0,0,0.10);
+    text-align: center;
+  }
+
+  .rb-stats__item:last-child {
+    border-right: none;
+  }
+
+  .rb-stats__icon {
+    font-size: 14px;
+    line-height: 1;
+    color: #111111;
+    flex-shrink: 0;
+  }
+
+  .rb-stats__text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #111111;
+    white-space: nowrap;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .rb-stats__inner {
+      flex-wrap: wrap;
+    }
+    .rb-stats__item {
+      flex: 1 1 50%;
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.10);
+    }
+    .rb-stats__item:nth-child(even) {
+      border-right: none;
+    }
+    .rb-stats__item:nth-last-child(-n+2) {
+      border-bottom: none;
+    }
+    .rb-stats__text {
+      font-size: 10px;
+      letter-spacing: 0.10em;
+      white-space: normal;
+      text-align: left;
+    }
+  }
+</style>
+
+<div class="rb-stats index-section" data-section-id="{{ section.id }}" data-section-type="rb-stats-bar">
+  <div class="rb-stats__inner">
+    {% for block in section.blocks %}
+      <div class="rb-stats__item" {{ block.shopify_attributes }}>
+        {% if block.settings.icon != blank %}
+          <span class="rb-stats__icon" aria-hidden="true">{{ block.settings.icon }}</span>
+        {% endif %}
+        <p class="rb-stats__text">{{ block.settings.label | escape }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Stats Bar",
+  "class": "rb-stats-wrap",
+  "max_blocks": 5,
+  "settings": [],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat",
+      "settings": [
+        { "type": "text", "id": "icon",  "label": "Icon character (optional)", "default": "★" },
+        { "type": "text", "id": "label", "label": "Stat text", "default": "4.9 / 5 Rating" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stats Bar",
+      "category": "Custom",
+      "blocks": [
+        { "type": "stat", "settings": { "icon": "★", "label": "4.9 / 5 Average Rating" } },
+        { "type": "stat", "settings": { "icon": "", "label": "2,500+ Verified Reviews" } },
+        { "type": "stat", "settings": { "icon": "", "label": "100% USA Handcrafted" } },
+        { "type": "stat", "settings": { "icon": "", "label": "Free Shipping Over $50" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

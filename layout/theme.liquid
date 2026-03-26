@@ -127,9 +127,7 @@
 
     {% section 'header' %}
 
-    {% if template.name == "index" %}
-      {% section 'slideshow' %}
-    {% endif %}
+    {% comment %} Slideshow replaced — hero lives in content_for_index as rb-hero section {% endcomment %}
 
     <main class="main-content" role="main">
       {% unless template.name == "index" or template == "collection.image" %}

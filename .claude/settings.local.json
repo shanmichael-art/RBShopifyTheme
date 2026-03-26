@@ -7,7 +7,10 @@
       "Bash(python skills/ui-ux-pro-max/scripts/search.py \"premium masculine beard grooming DTC ecommerce lifestyle brand\" --design-system -p \"Royal Beardsmen\" -f markdown)",
       "Bash(py --version)",
       "Bash(where python:*)",
-      "Bash(python -c \"import json; d=json.load\\(open\\(''C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/config/settings_data.json''\\)\\); print\\(d[''current''][''content_for_index'']\\)\")"
+      "Bash(python -c \"import json; d=json.load\\(open\\(''C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/config/settings_data.json''\\)\\); print\\(d[''current''][''content_for_index'']\\)\")",
+      "Bash(python -c \"import sys,json,re; s=sys.stdin.read\\(\\); m=re.search\\(r''''content_for_index.*?\\\\[.*?\\\\]'''', s\\); print\\(m.group\\(\\)[:200] if m else ''''not found''''\\)\")",
+      "Bash(ls C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/sections/rb-*.liquid)",
+      "Bash(grep -c \"section ''slideshow''\" C:/Users/shanm/OneDrive/Documents/GitHub/RBShopifyTheme/layout/theme.liquid)"
     ]
   }
 }
