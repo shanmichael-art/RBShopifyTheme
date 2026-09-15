@@ -1,13 +1,13 @@
 <!-- ============================= SEO Expert Pro ============================= -->
-    <title>{% if template == "index" and shop.metafields.evmSEOMeta.title_homepage!="" %}{{shop.metafields.evmSEOMeta.title_homepage}}{% elsif collection.handle == "all" and shop.metafields.evmSEOMeta.title_collectionsAll!="" %} {{shop.metafields.evmSEOMeta.title_collectionsAll}}{% elsif template == "search"  and shop.metafields.evmSEOMeta.title_search!=""  %}{{shop.metafields.evmSEOMeta.title_search}}{% elsif template == "404" and shop.metafields.evmSEOMeta.title_404!="" %}{{shop.metafields.evmSEOMeta.title_404}}{% else %}{{ page_title }}{% endif %}</title>
+    <title>{% if template == "index" and shop.metafields.evmSEOMeta.title_homepage %}{{shop.metafields.evmSEOMeta.title_homepage}}{% elsif collection.handle == "all" and shop.metafields.evmSEOMeta.title_collectionsAll %} {{shop.metafields.evmSEOMeta.title_collectionsAll}}{% elsif template == "search" and shop.metafields.evmSEOMeta.title_search %}{{shop.metafields.evmSEOMeta.title_search}}{% elsif template == "404" and shop.metafields.evmSEOMeta.title_404 %}{{shop.metafields.evmSEOMeta.title_404}}{% else %}{{ page_title }}{% endif %}</title>
    
-    {% if template == "index"  and shop.metafields.evmSEOMeta.description_homepage!="" %}
+    {% if template == "index" and shop.metafields.evmSEOMeta.description_homepage %}
         <meta name="description" content="{{shop.metafields.evmSEOMeta.description_homepage}}" />
-    {% elsif collection.handle == "all"  and shop.metafields.evmSEOMeta.description_collectionsAll!="" %}
+    {% elsif collection.handle == "all" and shop.metafields.evmSEOMeta.description_collectionsAll %}
         <meta name="description" content="{{shop.metafields.evmSEOMeta.description_collectionsAll}}" />
-    {% elsif template == "search" and shop.metafields.evmSEOMeta.description_search!=""  %}
+    {% elsif template == "search" and shop.metafields.evmSEOMeta.description_search %}
         <meta name="description" content="{{shop.metafields.evmSEOMeta.description_search}}" />
-    {% elsif template == "404" and shop.metafields.evmSEOMeta.description_404!="" %}
+    {% elsif template == "404" and shop.metafields.evmSEOMeta.description_404 %}
         <meta name="description" content="{{shop.metafields.evmSEOMeta.description_404}}" />
     {% elsif page_description %}
         <meta name="description" content="{{ page_description | escape }}" />
@@ -102,4 +102,43 @@
             {% endfor %}
         ]
 </script>
-{% endif %}
+{% endif %}{%- comment -%}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: '{% if template == "index" and shop.metafields.evmSEOMeta.title_homepage!=""
+    %}'
+  to: '{% if template == "index" and shop.metafields.evmSEOMeta.title_homepage %}'
+  position: 95..169
+- from: '{% elsif collection.handle == "all" and shop.metafields.evmSEOMeta.title_collectionsAll!=""
+    %}'
+  to: '{% elsif collection.handle == "all" and shop.metafields.evmSEOMeta.title_collectionsAll
+    %}'
+  position: 214..304
+- from: '{% elsif template == "search"  and shop.metafields.evmSEOMeta.title_search!=""  %}'
+  to: '{% elsif template == "search" and shop.metafields.evmSEOMeta.title_search %}'
+  position: 356..432
+- from: '{% elsif template == "404" and shop.metafields.evmSEOMeta.title_404!="" %}'
+  to: '{% elsif template == "404" and shop.metafields.evmSEOMeta.title_404 %}'
+  position: 475..545
+- from: '{% if template == "index"  and shop.metafields.evmSEOMeta.description_homepage!=""
+    %}'
+  to: '{% if template == "index" and shop.metafields.evmSEOMeta.description_homepage
+    %}'
+  position: 639..719
+- from: '{% elsif collection.handle == "all"  and shop.metafields.evmSEOMeta.description_collectionsAll!=""
+    %}'
+  to: '{% elsif collection.handle == "all" and shop.metafields.evmSEOMeta.description_collectionsAll
+    %}'
+  position: 822..918
+- from: '{% elsif template == "search" and shop.metafields.evmSEOMeta.description_search!=""  %}'
+  to: '{% elsif template == "search" and shop.metafields.evmSEOMeta.description_search
+    %}'
+  position: 1027..1109
+- from: '{% elsif template == "404" and shop.metafields.evmSEOMeta.description_404!=""
+    %}'
+  to: '{% elsif template == "404" and shop.metafields.evmSEOMeta.description_404 %}'
+  position: 1210..1286
+{%- endcomment -%}
